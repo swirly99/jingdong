@@ -1,0 +1,251 @@
+@import "common";
+/*顶部推广广告*/
+.promotional-top {
+    background: rgb(251, 249, 249);
+    .container {
+        height: 80px;
+        background: url(../img/promotionalTop.webp) no-repeat center 100%;
+        position: relative;
+        .close {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #2d2d2d;
+            opacity: 0.3;
+            top: 5px;
+            right: 0;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            font-weight: 600;
+        }
+    }
+}
+/*顶部导航*/
+.shortcut {
+    background: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+    .container {
+        height: 30px;
+        .left {
+            float: left;
+            .dropdown {
+                position: absolute;
+                a {
+                    display: inline-block;
+                    color: #999;
+                    font-size: 12px;
+                    line-height: 30px;
+                    height: 30px;
+                    text-decoration: none;
+                    padding: 0 7px;
+                    border: 1px solid transparent;
+                    box-sizing: border-box;
+                    border-bottom: 0;
+                    .iconfont {
+                        color: @JDcolor;
+                    }
+                    &:hover {
+                        background: #fff;
+                        color: @JDcolor;
+                        border-color: #ccc;
+                        height: 31px;
+                    }
+                }
+                &:hover + .chooseArea {
+                    display: block;
+                }
+            }
+            .chooseArea {
+                display: none;
+                width: 322px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                margin-top: 30px;
+                &:hover {
+                    display: block;
+                }
+                &:hover + .dropdown {
+                    a {
+                        background: #fff;
+                        color: @JDcolor;
+                        border-color: #ccc;
+                        height: 31px;
+                    }
+                }
+                ul {
+                    overflow: hidden;
+                    font-size: 12px;
+                    margin: 10px 0 0 10px;
+                    &::before {
+                        display: block;
+                        content: "";
+                        width: 262px;
+                        height: 1px;
+                        border-bottom: 1px dotted #eee;
+                    }
+                    li {
+                        float: left;
+                        width: 145px;
+                        line-height: 26px;
+                        i {
+                            font-size: 12px;
+                        }
+                        a {
+                            display: inline-block;
+                            color: #999;
+                            text-decoration: none;
+                            .country {
+                                display: inline-block;
+                                width: 15px;
+                                height: 10px;
+                                background: url(../img/countrySprite.png) no-repeat;
+                                margin-right: 8px;
+                            }
+                            &:hover {
+                                color: #e33333;
+                            }
+                        }
+                    }
+                    li.title {
+                        width: 100%;
+                        color: #999;
+                        line-height: 48px;
+                    }
+                    &:first-child {
+                        margin: 0;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    &:first-child li {
+                        width: 60px;
+                        padding: 2px 0;
+                        a {
+                            padding: 0 8px;
+                            text-align: center;
+                            line-height: 30px;
+                            &:hover {
+                                background: #f4f4f4;
+                            }
+                        }
+                        a.active {
+                            color: #fff;
+                            background: @JDcolor;
+                        }
+                    }
+                    &:last-child {
+                        li {
+                            &:nth-child(2) {
+                                .country {
+                                    height: 12px;
+                                    background-position: -1px 0;
+                                }
+                            }
+                            &:nth-child(3) {
+                                .country {
+                                    background-position: -20px 0;
+                                    border: 1px solid #ebebeb;
+                                }
+                            }
+                            &:nth-child(4) {
+                                .country {
+                                    background-position: 0 -17px;
+                                    border: 1px solid #ebebeb;
+                                }
+                            }
+                            &:nth-child(5) {
+                                .country {
+                                    background-position: -40px 0;
+                                }
+                            }
+                            &:nth-child(6) {
+                                .country {
+                                    background-position: -20px -17px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            float: right;
+            ul {
+                margin: 0;
+                position: relative;
+                li {
+                    float: left;
+                    list-style: none;
+                    &::after {
+                        display: inline-block;
+                        content: "";
+                        width: 1px;
+                        height: 10px;
+                        background: #ccc;
+                        margin: 10px 5px 0px;
+                    }
+                    &:last-child::after {
+                        display: none;
+                    }
+                    a {
+                        display: inline-block;
+                        font-size: 12px;
+                        color: #999;
+                        text-decoration: none;
+                        line-height: 30px;
+                        height: 30px;
+                        padding: 0 7px;
+                        span.JDcolor {
+                            color: @JDcolor;
+                        }
+                        span.hoverJDcolor {
+                            &:hover {
+                                color: @JDcolor;
+                            }
+                        }
+                        i {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                li.myJD {
+                    position: relative;
+                    > a {
+                        position: absolute;
+                        border: 1px solid transparent;
+                        border-bottom: 0;
+                        width: 90px;
+                        &:hover {
+                            background: #fff;
+                            border-color: #ccc;
+                            height: 31px;
+                        }
+                    }
+                    div {
+                        position: absolute;
+                        margin-top: 30px;
+                        width: 280px;
+                        border: 1px solid #ccc;
+                        ul {
+                            padding: 10px 0 10px 15px;
+                            overflow: hidden;
+                            li {
+                                width: 126px;
+                                a {
+                                    line-height: 24px;
+                                }
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                            &:first-child {
+                                border-bottom: 1px solid #f1f1f1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
