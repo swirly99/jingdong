@@ -70,6 +70,7 @@ function leftMenu(data) {
         templateInfo += dl;
     }
     $(".l_btm").html(templateInfo);
+
     //拼接logo
     let logo = data.logo;
     let templateLogo = "";
@@ -78,6 +79,7 @@ function leftMenu(data) {
         <img src="${el}" alt="" />
     </a>`;
     });
+    $(".r_logo").html(templateLogo);
     //拼接img
     let img = data.img;
     let templateImg = "";

@@ -105,7 +105,7 @@ body {
   display: block;
 }
 .shortcut .container .left .dropdown {
-  z-index: 10;
+  z-index: 1000;
   position: absolute;
 }
 .shortcut .container .left .dropdown a {
@@ -125,7 +125,7 @@ body {
 }
 .shortcut .container .left .chooseArea {
   position: absolute;
-  z-index: 1;
+  z-index: 100;
   display: none;
   width: 322px;
   padding: 10px;
@@ -255,7 +255,7 @@ body {
 }
 .shortcut .container .right ul li .secNav-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   display: inline-block;
   vertical-align: top;
 }
@@ -270,7 +270,7 @@ body {
   position: relative;
   border: 1px solid transparent;
   border-bottom: 0;
-  z-index: 10;
+  z-index: 100;
 }
 .shortcut .container .right ul li .secNav-wrapper > a:hover + .secNav {
   display: block;
@@ -379,7 +379,7 @@ body {
   position: absolute;
   right: 0;
   background: #fff;
-  z-index: 1;
+  z-index: 10;
   border: 1px solid #cfcfcf;
   border-bottom: 3px solid #60575a;
   width: 190px;
@@ -626,6 +626,7 @@ body {
 }
 /*banner*/
 .banner {
+  overflow: hidden;
   padding-top: 10px;
 }
 .banner .left {
@@ -663,6 +664,7 @@ body {
   background: #d9d9d9;
 }
 .banner .left .leftMenu {
+  display: none;
   position: absolute;
   left: 191px;
   width: 1000px;
@@ -698,6 +700,9 @@ body {
 .banner .left .leftMenu .leftText .l_top a i {
   vertical-align: middle;
 }
+.banner .left .leftMenu .leftText .l_top a:hover {
+  background-color: #e1251b;
+}
 .banner .left .leftMenu .leftText .l_btm {
   padding: 10px 0 0 20px;
 }
@@ -721,6 +726,9 @@ body {
   height: 22px;
   font-weight: bold;
 }
+.banner .left .leftMenu .leftText .l_btm dl dt a:hover {
+  color: #e1251b;
+}
 .banner .left .leftMenu .leftText .l_btm dl dd {
   float: left;
 }
@@ -731,6 +739,9 @@ body {
   text-decoration: none;
   color: #666;
   line-height: 16px;
+}
+.banner .left .leftMenu .leftText .l_btm dl dd a:hover {
+  color: #e1251b;
 }
 .banner .left .leftMenu .rightImg {
   float: left;
@@ -749,6 +760,7 @@ body {
 }
 .banner .left .leftMenu .rightImg .r_logo a img {
   width: 100%;
+  height: 100%;
 }
 .banner .left .leftMenu .rightImg .r_img {
   margin: 10px auto 0;
@@ -762,6 +774,10 @@ body {
 }
 .banner .left .leftMenu .rightImg .r_img a img {
   width: 100%;
+  height: 100%;
+}
+.banner .left:hover .leftMenu {
+  display: block;
 }
 .banner .center {
   float: left;
