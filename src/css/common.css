@@ -9,3 +9,53 @@ ul {
 ul li {
   list-style: none;
 }
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.swiper-buttons,
+.swiper-button-next,
+.swiper-button-prev {
+  width: 25px;
+  height: 35px;
+  line-height: 35px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  transition: 0.2s;
+}
+.swiper-button-next {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  right: 0;
+}
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-next::before {
+  margin-right: -6px;
+}
+.swiper-button-next:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.swiper-button-prev {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  left: 0;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.swiper-button-prev::before {
+  margin-left: -6px;
+}
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
