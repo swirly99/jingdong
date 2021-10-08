@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh_CN">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
         <link href="https://cdn.bootcdn.net/ajax/libs/reseter.css/2.0.0/reseter.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="http://at.alicdn.com/t/font_2844066_wbk7qa2k1c.css" />
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_2844066_bop2g9j6nk8.css" />
         <link rel="stylesheet" href="../css/index.css" />
         <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
     </head>
@@ -910,6 +910,412 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="mininav">
+                        <ul>
+                            <li id="telephone">
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-huafei"></i>
+                                    <span>话费</span>
+                                </a>
+                            </li>
+                            <li id="ticket">
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-jipiao"></i>
+                                    <span>机票</span>
+                                </a>
+                            </li>
+                            <li id="hotel">
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-hotel"></i>
+                                    <span>酒店</span>
+                                    <i class="text">省</i>
+                                </a>
+                            </li>
+                            <li id="game">
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-dianziyouxi"></i>
+                                    <span>游戏</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-jingdong-jiayouqia-e"></i>
+                                    <span>加油卡</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-huochepiao"></i>
+                                    <span>火车票</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-iconfontzhongchou"></i>
+                                    <span>众筹</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-tuoyuan1kaobei"></i>
+                                    <span>理财</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-baitiao"></i>
+                                    <span>白条</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-movie"></i>
+                                    <span>电影票</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-qiyegou"></i>
+                                    <span>企业购</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="iconfont icon-lipinqia"></i>
+                                    <span>礼品卡</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="detail">
+                            <div id="d_telephone">
+                                <div class="title">
+                                    <span class="prepaidRefill title_active">话费充值</span>
+                                    <span class="flow">流量充值</span>
+                                </div>
+                                <div class="prepaidRefillDiv">
+                                    <div>
+                                        <span>号码</span>
+                                        <input type="text" placeholder="移动/联通/电信" />
+                                    </div>
+                                    <div class="selectOnec">
+                                        <span>面值</span>
+                                        <select class="faceValue">
+                                            <option value="10元">10元</option>
+                                            <option value="20元">20元</option>
+                                            <option value="30元">30元</option>
+                                            <option value="50元">50元</option>
+                                            <option value="100元" selected>100元</option>
+                                            <option value="200元">200元</option>
+                                            <option value="300元">300元</option>
+                                            <option value="500元">500元</option>
+                                        </select>
+                                        <p class="charge">￥98.0-￥100.0</p>
+                                    </div>
+                                    <button>快速充值</button>
+                                </div>
+                                <div class="flowDiv">
+                                    <div>
+                                        <span>号码</span>
+                                        <input type="text" placeholder="移动/联通/电信" />
+                                    </div>
+                                    <div class="selectOnec">
+                                        <span>流量</span>
+                                        <select class="area">
+                                            <option value="全国">全国</option>
+                                            <option value="省内">省内</option>
+                                        </select>
+                                        <select class="MB">
+                                            <option value="50M">50M</option>
+                                            <option value="100M">100M</option>
+                                            <option value="200M">200M</option>
+                                            <option value="300M">300M</option>
+                                            <option value="500M">500M</option>
+                                        </select>
+                                        <p class="MBcharge">￥7.5-￥10.0</p>
+                                    </div>
+                                    <button>快速充值</button>
+                                    <span class="annotation">
+                                        <a href="javascript:;"> App Store充值卡</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="d_ticket">
+                                <div class="title">
+                                    <span class="domestic title_active">国内机票</span>
+                                    <span class="international">国际/港澳台</span>
+                                    <span class="preference">特惠</span>
+                                </div>
+                                <div class="ticketOrder">
+                                    <div class="o_domestic">
+                                        <div class="oneOrRound">
+                                            <input type="radio" name="trip" id="oneway" checked />
+                                            <label for="oneway">单程</label>
+                                            <input type="radio" name="trip" id="round" />
+                                            <label for="round">往返</label>
+                                        </div>
+                                        <div class="city">
+                                            <p>出发<input type="text" placeholder="城市" class="departure" /></p>
+                                            <p>到达<input type="text" placeholder="城市" class="arrival" /></p>
+                                            <i class="iconfont icon-jiaohuan"></i>
+                                        </div>
+                                        <div class="date">
+                                            <p>
+                                                <span>日期</span>
+                                                <input type="text" placeholder="出发" class="departureTime" />
+                                                <input type="text" placeholder="返程" class="arrivalTime t_a_round" />
+                                            </p>
+                                        </div>
+                                        <button>机票查询</button>
+                                        <span class="annotation">
+                                            <a href="javascript:;">当季热门特惠机票</a>
+                                        </span>
+                                    </div>
+                                    <div class="o_international">
+                                        <div class="oneOrRound">
+                                            <input
+                                                type="radio"
+                                                name="trip_int"
+                                                id="oneway_int"
+                                                checked
+                                                class="oneway"
+                                            />
+                                            <label for="oneway_int">单程</label>
+                                            <input type="radio" name="trip_int" id="round_int" class="round" />
+                                            <label for="round_int">往返</label>
+                                        </div>
+                                        <div class="city">
+                                            <p>出发<input type="text" placeholder="城市" class="departure" /></p>
+                                            <p>到达<input type="text" placeholder="城市" class="arrival" /></p>
+                                            <i class="iconfont icon-jiaohuan"></i>
+                                        </div>
+                                        <div class="date">
+                                            <p>
+                                                <span>日期</span>
+                                                <input type="text" placeholder="出发" class="departureTime" />
+                                                <input type="text" placeholder="返程" class="arrivalTime t_a_round" />
+                                            </p>
+                                        </div>
+                                        <button>机票查询</button>
+                                        <span class="annotation">
+                                            <a href="javascript:;">国际机票任性搜</a>
+                                        </span>
+                                    </div>
+                                    <div class="o_preference">
+                                        <a href="javascript:;">
+                                            <img src="../img/o_preference1.jpg" alt="" />
+                                        </a>
+                                        <a href="javascript:;">
+                                            <img src="../img/o_preference2.jpg" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="d_hotel">
+                                <div class="title">
+                                    <span class="inland title_active">国际/港澳台</span>
+                                    <span class="promotion">促销活动</span>
+                                </div>
+                                <div class="hotelOrder">
+                                    <div class="o_inland">
+                                        <p>
+                                            <span>目的地</span>
+                                            <input type="text" placeholder="北京" />
+                                        </p>
+                                        <p>
+                                            <span>入住日期</span>
+                                            <input type="text" placeholder="2021-10-09" />
+                                        </p>
+                                        <p>
+                                            <span>离店日期</span>
+                                            <input type="text" placeholder="2021-10-10" />
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="酒店/商圈/地标" />
+                                        </p>
+                                        <button>酒店查询</button>
+                                        <span class="annotation">
+                                            <a href="javascript:;">订酒店上京东</a>
+                                        </span>
+                                    </div>
+                                    <div class="o_promotion">
+                                        <a href="javascript:;">
+                                            <img src="../img/o_promotion1.jpg" alt="" />
+                                        </a>
+                                        <a href="javascript:;">
+                                            <img src="../img/o_promotion2.jpg" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="d_game">
+                                <div class="title">
+                                    <span class="entertainment title_active">视频/娱乐</span>
+                                    <span class="timeCard">点卡</span>
+                                    <span class="QQ">QQ</span>
+                                </div>
+                                <div class="gameOrder">
+                                    <div class="o_entertainment">
+                                        <p class="typeService">
+                                            <span>服务类型</span><input type="text" placeholder="类型" />
+                                        </p>
+                                        <p class="topUp">
+                                            <span>充值时长</span><input type="text" placeholder="时长" />
+                                        </p>
+                                        <p>￥0.00</p>
+                                        <div class="DirectOrPwd">
+                                            <input type="radio" name="charge" id="Direct" checked />
+                                            <label for="Direct">直充</label>
+                                            <input type="radio" name="charge" id="Pwd" />
+                                            <label for="Pwd">卡密</label>
+                                        </div>
+                                        <button>快速充值</button>
+                                    </div>
+                                    <div class="o_itimeCard">
+                                        <p class="typeService">
+                                            <span>游戏</span><input type="text" placeholder="游戏" />
+                                        </p>
+                                        <p class="topUp"><span>面值</span><input type="text" placeholder="面值" /></p>
+                                        <p>￥0.00</p>
+                                        <div class="DirectOrPwd">
+                                            <input type="radio" name="charge2" id="Direct2" checked />
+                                            <label for="Direct2">直充</label>
+                                            <input type="radio" name="charge2" id="Pwd2" />
+                                            <label for="Pwd2">卡密</label>
+                                        </div>
+                                        <button>快速充值</button>
+                                        <span class="annotation">
+                                            <a href="javascript:;">腾讯视频特惠</a>
+                                        </span>
+                                    </div>
+                                    <div class="o_QQ">
+                                        <p class="typeService">
+                                            <span> QQ</span><input type="text" placeholder="Q币" />
+                                        </p>
+                                        <p class="topUp"><span>面值</span><input type="text" placeholder="1元" /></p>
+                                        <p>￥0.99</p>
+                                        <div class="DirectOrPwd">
+                                            <input type="radio" name="charge3" id="Direct3" checked />
+                                            <label for="Direct3">直充</label>
+                                        </div>
+                                        <button>快速充值</button>
+                                        <span class="annotation">
+                                            <a href="javascript:;">腾讯视频特惠</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="iconfont icon-31guanbi close"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 京东秒杀 -->
+        <div class="seckill">
+            <div class="container">
+                <div class="left">
+                    <h2>京东秒杀</h2>
+                    <p class="finish"><strong class="session">00:00</strong>点场 距结束</p>
+                    <p class="countDown">
+                        <span class="hour"></span><span class="minute"></span><span class="second"></span>
+                    </p>
+                </div>
+                <div class="center">
+                    <div class="swiper-container swiper-seckill">
+                        <div class="swiper-wrapper"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next iconfont icon-you"></div>
+                        <div class="swiper-button-prev iconfont icon-zuo-"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="r_img">
+                        <img src="../img/seckillRight.jpg.webp" alt="" />
+                    </div>
+                    <div class="info">
+                        <p><a href="javascript:;">母婴家清专场</a></p>
+                        <strong><a href="javascript:;">爆款直降</a></strong>
+                        <button>品类秒杀&nbsp;&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 特色优选 -->
+        <div class="special">
+            <div class="container">
+                <div class="floor1">
+                    <div class="f1_left">
+                        <div class="f1_title">
+                            <h2>
+                                每日特价
+                                <i class="iconfont icon-gengduo"></i>
+                            </h2>
+                        </div>
+                        <div class="f1_content">
+                            <ul class="f1_header">
+                                <li><a href="javascript:;" class="f1header_active">精选</a></li>
+                                <li><a href="javascript:;">美食</a></li>
+                                <li><a href="javascript:;">百货</a></li>
+                                <li><a href="javascript:;">个护</a></li>
+                                <li><a href="javascript:;">预告</a></li>
+                            </ul>
+                            <div class="f1_detail">
+                                <div class="left_content">
+                                    <p class="sign">1年最低价</p>
+                                    <img src="../img/specialf1righchoiceness1.jpg.webp" alt="" />
+                                    <p class="headline">回力老爹鞋女春季网面</p>
+                                    <p class="price">￥<span>62</span></p>
+                                </div>
+                                <div class="right_content">
+                                    <div class="f1r_item">
+                                        <div class="item_img">
+                                            <img src="../img/specialf1righchoiceness2.jpg.webp" alt="" />
+                                            <p>157天最低价</p>
+                                        </div>
+                                        <div class="item_detail">
+                                            <p class="item_name">猴头菇粗粮曲奇饼干含糖1箱</p>
+                                            <p class="item_ptice">￥ <span>93.3</span></p>
+                                            <p class="soldMsg">已抢 <span>284</span>件</p>
+                                        </div>
+                                    </div>
+                                    <div class="f1r_item">
+                                        <div class="item_img">
+                                            <img src="../img/specialf1righchoiceness2.jpg.webp" alt="" />
+                                            <p>157天最低价</p>
+                                        </div>
+                                        <div class="item_detail">
+                                            <p class="item_name">猴头菇粗粮曲奇饼干含糖1箱</p>
+                                            <p class="item_ptice">￥ <span>93.3</span></p>
+                                            <p class="soldMsg">已抢 <span>284</span>件</p>
+                                        </div>
+                                    </div>
+                                    <div class="f1r_item">
+                                        <div class="item_img">
+                                            <img src="../img/specialf1righchoiceness2.jpg.webp" alt="" />
+                                            <p>157天最低价</p>
+                                        </div>
+                                        <div class="item_detail">
+                                            <p class="item_name">猴头菇粗粮曲奇饼干含糖1箱</p>
+                                            <p class="item_ptice">￥ <span>93.3</span></p>
+                                            <p class="soldMsg">已抢 <span>284</span>件</p>
+                                        </div>
+                                    </div>
+                                    <div class="f1r_item">
+                                        <div class="item_img">
+                                            <img src="../img/specialf1righchoiceness2.jpg.webp" alt="" />
+                                            <p>157天最低价</p>
+                                        </div>
+                                        <div class="item_detail">
+                                            <p class="item_name">猴头菇粗粮曲奇饼干含糖1箱</p>
+                                            <p class="item_ptice">￥ <span>93.3</span></p>
+                                            <p class="soldMsg">已抢 <span>284</span>件</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f1_right"></div>
                 </div>
             </div>
         </div>

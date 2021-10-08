@@ -615,6 +615,7 @@ body {
 .banner {
     overflow: hidden;
     padding-top: 10px;
+    margin-bottom: 30px;
     .left {
         float: left;
         margin-right: 10px;
@@ -848,7 +849,7 @@ body {
     }
     .right {
         width: 190px;
-        height: 480px;
+        height: 470px;
         float: right;
         background: #fff;
         .personal {
@@ -966,6 +967,719 @@ body {
                             background: rgba(225, 37, 27, 0.08);
                             text-align: center;
                             margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .mininav {
+            position: relative;
+            padding: 5px 0px;
+            ul {
+                padding-top: 7px;
+                overflow: hidden;
+                li {
+                    float: left;
+                    margin-top: 0;
+                    transition: all 0.2s;
+                    position: relative;
+                    background: #fff;
+                    &:nth-child(1),
+                    &:nth-child(8),
+                    &:nth-child(11) {
+                        i {
+                            color: #5aaae5;
+                        }
+                    }
+                    &:nth-child(2),
+                    &:nth-child(4),
+                    &:nth-child(12) {
+                        i {
+                            color: #f2a233;
+                        }
+                    }
+                    &:nth-child(3),
+                    &:nth-child(5),
+                    &:nth-child(7) {
+                        i {
+                            color: #41d7c7;
+                        }
+                    }
+                    &:nth-child(6),
+                    &:nth-child(9),
+                    &:nth-child(10) {
+                        i {
+                            color: #eb675e;
+                        }
+                    }
+                    a {
+                        display: block;
+                        width: 63px;
+                        height: 55px;
+                        text-decoration: none;
+                        color: #333;
+                        text-align: center;
+                        position: relative;
+                        i {
+                            display: block;
+                            font-size: 25px;
+                            font-weight: bold;
+                        }
+                        span {
+                            display: block;
+                            height: 25px;
+                            line-height: 25px;
+                            font-size: 12px;
+                        }
+                        i.text {
+                            position: absolute;
+                            right: 5px;
+                            top: 0;
+                            width: 14px;
+                            height: 14px;
+                            font-size: 12px;
+                            line-height: 14px;
+                            text-align: center;
+                            background: @JDcolor;
+                            color: #fff;
+                            z-index: 1;
+                            transition-property: width, height, border-radio;
+                            transition-duration: 0.2s;
+                            transition-timing-function: ease;
+                            font-style: normal;
+                        }
+                        &:hover {
+                            i {
+                                color: @JDcolor;
+                            }
+                            span {
+                                color: @JDcolor;
+                            }
+                        }
+                        i.textHover {
+                            width: 4px;
+                            height: 4px;
+                            font-size: 0;
+                            border-radius: 100%;
+                            top: 34px;
+                        }
+                    }
+                }
+                .li_active {
+                    a {
+                        color: @JDcolor;
+                    }
+                    &::after {
+                        position: absolute;
+                        bottom: 2px;
+                        display: block;
+                        content: "";
+                        width: 24px;
+                        height: 2px;
+                        background: @JDcolor;
+                        left: 20px;
+                    }
+                }
+            }
+            .detail {
+                position: absolute;
+                top: 0px;
+                z-index: 1;
+                width: 190px;
+                overflow: hidden;
+                height: 0px;
+                transition: 0.5s;
+                overflow: hidden;
+                padding: 12px 15px 0px;
+                background-color: #fff;
+                font-size: 12px;
+                color: #666;
+                > i {
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 10px;
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    border-radius: 50%;
+                    color: #666;
+                    text-align: center;
+                    cursor: pointer;
+                    &:hover {
+                        background: @JDcolor;
+                        color: #fff;
+                    }
+                }
+                .title {
+                    cursor: pointer;
+                    .flow {
+                        padding-left: 5px;
+                    }
+                    .title_active {
+                        color: @JDcolor;
+                    }
+                }
+                .o_preference,
+                .o_promotion {
+                    a {
+                        float: left;
+                        padding-top: 10px;
+                        img {
+                            width: 75px;
+                            height: 96px;
+                        }
+                        &:last-child {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                input {
+                    height: 20px;
+                    line-height: 20px;
+                    border: 1px solid #e7e7e7;
+                    margin-left: 10px;
+                    font-size: 12px;
+                    &:hover {
+                        border-color: #338fff;
+                    }
+                }
+                button {
+                    font-size: 12px;
+                    width: 60px;
+                    height: 20px;
+                    background: #e40015;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 20px;
+                    border: 0;
+                    border-radius: 10px;
+                    margin-top: 5px;
+                    cursor: pointer;
+                }
+                .annotation {
+                    font-size: 12px;
+                    height: 20px;
+                    line-height: 20px;
+                    a {
+                        color: #5476db;
+                        text-decoration: none;
+                        &:hover {
+                            color: @JDcolor;
+                        }
+                    }
+                }
+                #d_telephone {
+                    .prepaidRefillDiv,
+                    .flowDiv {
+                        margin-top: 10px;
+                        div {
+                            overflow: hidden;
+                            span {
+                                float: left;
+                                line-height: 20px;
+                            }
+                            input {
+                                color: #c2c2c2;
+                                float: left;
+                                width: 124px;
+                                font-size: 12px;
+                                padding: 1px 2px 0 8px;
+                            }
+                            select {
+                                font-size: 12px;
+                                width: 124px;
+                                margin-left: 10px;
+                                height: 20px;
+                                border: 1px solid #e7e7e7;
+                            }
+                        }
+                        .selectOnec {
+                            margin-top: 8px;
+                            .charge,
+                            .MBcharge {
+                                padding-top: 5px;
+                                color: @JDcolor;
+                                clear: both;
+                            }
+                        }
+                    }
+                    .flowDiv {
+                        display: none;
+                        .selectOnec {
+                            select {
+                                width: 60px;
+                                float: left;
+                                &:last-of-type {
+                                    margin-left: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+                #d_ticket {
+                    .title {
+                        span {
+                            margin-right: 7px;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    .ticketOrder {
+                        width: 570px;
+                        transition: 0.5s;
+                        > div {
+                            width: 175px;
+                            float: left;
+                            input {
+                                width: 118px;
+                                color: rgb(102, 102, 102);
+                                text-align: center;
+                                padding: 0;
+                            }
+                            .oneOrRound {
+                                margin: 10px 0;
+                                input {
+                                    width: 13px;
+                                    height: 13px;
+                                    margin-right: 8px;
+                                    margin-left: 0;
+                                    vertical-align: middle;
+                                }
+                                label {
+                                    display: inline-block;
+                                    margin-right: 15px;
+                                    height: 15px;
+                                    line-height: 15px;
+                                    vertical-align: middle;
+                                }
+                            }
+                            .city {
+                                position: relative;
+                                i {
+                                    position: absolute;
+                                    right: 15px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    background: #fff;
+                                    cursor: pointer;
+                                }
+                            }
+                            .date {
+                                margin: 10px 0;
+                                p {
+                                    overflow: hidden;
+                                    span {
+                                        float: left;
+                                    }
+                                    input {
+                                        width: 126px;
+                                        float: left;
+                                    }
+                                    .t_a_round {
+                                        display: none;
+                                        width: 63px;
+                                        float: left;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #d_hotel {
+                    .title {
+                        margin-bottom: 13px;
+                        span {
+                            &:first-child {
+                                margin-right: 14px;
+                            }
+                        }
+                    }
+                    .hotelOrder {
+                        width: 350px;
+                        transition: 0.5s;
+                        > div {
+                            float: left;
+                            width: 175px;
+                            p {
+                                margin-top: 5px;
+                                input {
+                                    width: 103px;
+                                    margin-left: 5px;
+                                    padding-left: 10px;
+                                }
+                                &:first-child {
+                                    input {
+                                        margin-left: 17px;
+                                    }
+                                }
+                                &:last-of-type {
+                                    input {
+                                        width: 158px;
+                                        margin-left: 0;
+                                        color: #000;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                            button {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+                #d_game {
+                    .title {
+                        span {
+                            margin-right: 10px;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    .gameOrder {
+                        width: 525px;
+                        > div {
+                            width: 175px;
+                            float: left;
+                            .typeService,
+                            .topUp {
+                                input {
+                                    width: 97px;
+                                }
+                            }
+                            p {
+                                margin-top: 10px;
+                            }
+                            input {
+                                vertical-align: middle;
+                            }
+                            label {
+                                vertical-align: middle;
+                            }
+                            .DirectOrPwd {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .showDetail {
+                top: 29px;
+                z-index: 1;
+                height: 206px;
+            }
+        }
+    }
+}
+/*京东秒杀*/
+.seckill {
+    height: 260px;
+    margin-bottom: 20px;
+    text-align: center;
+    .left {
+        float: left;
+        width: 190px;
+        height: 260px;
+        background: url(../img/seckillbg.png) no-repeat center;
+        color: #fff;
+        h2 {
+            font-size: 30px;
+            margin-top: 31px;
+            padding: 5px 0;
+        }
+        .finish {
+            font-size: 14px;
+            margin-top: 90px;
+            line-height: 18px;
+            .session {
+                font-size: 18px;
+                vertical-align: middle;
+            }
+        }
+        .countDown {
+            margin: 20px 30px 0 30px;
+            span {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 20px;
+                margin-right: 20px;
+                background: #2f3430;
+                font-weight: bold;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: ":";
+                    width: 20px;
+                    text-align: center;
+                    height: 100%;
+                    left: 30px;
+                }
+                &:last-child {
+                    margin-right: 0;
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .center {
+        position: relative;
+        float: left;
+        width: 800px;
+        overflow: hidden;
+        a {
+            display: inline-block;
+            width: 200px;
+            height: 260px;
+            text-align: center;
+            text-decoration: none;
+            background: #fff;
+            position: relative;
+            &::after {
+                position: absolute;
+                right: 0;
+                top: 0;
+                content: "";
+                width: 1px;
+                height: 100%;
+                background: linear-gradient(180deg, white, #eeeeee, white);
+            }
+            img {
+                margin-top: 30px;
+                width: 140px;
+                height: 140px;
+            }
+            .title {
+                font-size: 12px;
+                color: #333;
+                padding: 13px 20px 0;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .price {
+                line-height: 24px;
+                padding: 7px 20px 0;
+                font-size: 12px;
+                color: @JDcolor;
+            }
+        }
+    }
+    .right {
+        float: left;
+        width: 200px;
+        height: 260px;
+        padding: 10px;
+        background: #fff;
+        .r_img {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto 0px;
+            img {
+                width: 100%;
+            }
+        }
+        .info {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(220, 224, 236, 0.5));
+            text-align: center;
+            font-size: 14px;
+            position: relative;
+            height: 90px;
+            margin-top: 10px;
+            p {
+                a {
+                    line-height: 20px;
+                    text-decoration: none;
+                    color: #666;
+                }
+            }
+            strong {
+                a {
+                    line-height: 20px;
+                    text-decoration: none;
+                    color: #333;
+                }
+            }
+            button {
+                display: block;
+                border-radius: 14px;
+                width: 82px;
+                height: 24px;
+                line-height: 22px;
+                font-weight: 700;
+                font-size: 12px;
+                border: 1px solid @JDcolor;
+                margin: 4px auto 0px;
+                transition: background-color 0.2s ease;
+                color: @JDcolor;
+                cursor: pointer;
+                &:hover {
+                    color: #fff;
+                    background: @JDcolor;
+                }
+            }
+        }
+    }
+}
+/*特色优选*/
+/*floor1*/
+.special {
+    .floor1 {
+        height: 340px;
+        margin: 20px 0;
+        .f1_left {
+            float: left;
+            width: 590px;
+            margin-right: 10px;
+            background: #fff;
+            position: relative;
+            .f1_title {
+                h2 {
+                    font-size: 24px;
+                    color: #333;
+                    line-height: 32px;
+                    padding-left: 20px;
+                    margin-top: 12px;
+                    i {
+                        color: @JDcolor;
+                        font-size: 18px;
+                        line-height: 32px;
+                    }
+                }
+            }
+            .f1_content {
+                .f1_header {
+                    position: absolute;
+                    top: 12px;
+                    right: 0;
+                    li {
+                        float: left;
+                        a {
+                            text-decoration: none;
+                            color: #999;
+                            font-size: 14px;
+                            line-height: 19px;
+                            margin: 0 13.5px;
+                        }
+                        .f1header_active {
+                            color: @JDcolor;
+                            border-bottom: 2px solid @JDcolor;
+                        }
+                    }
+                }
+                .f1_detail {
+                    padding: 0 15px 15px;
+                    height: 285px;
+                    overflow: hidden;
+                    .left_content {
+                        background-color: rgba(109, 126, 146, 0.05);
+                        float: left;
+                        width: 170px;
+                        height: 265px;
+                        margin-right: 6px;
+                        text-align: center;
+                        position: relative;
+                        .sign {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 90px;
+                            height: 24px;
+                            font-size: 12px;
+                            line-height: 24px;
+                            color: #fff;
+                            background: url(../img/specialf1righchoiceness_sign.png);
+                        }
+                        img {
+                            margin-top: 42px;
+                            width: 120px;
+                            height: 120px;
+                        }
+                        .headline {
+                            color: #333;
+                            margin: 9px auto 4px;
+                            font-size: 14px;
+                            line-height: 19px;
+                            width: 150px;
+                            text-align: center;
+                        }
+                        .price {
+                            color: @JDcolor;
+                            font-size: 12px;
+                            font-weight: bold;
+                            span {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .right_content {
+                        .f1r_item {
+                            float: left;
+                            margin: 18px 0 48px 19px;
+                            width: 170px;
+                            height: 89px;
+                            &:nth-child(3),
+                            &:nth-child(4) {
+                                margin-top: 0;
+                            }
+                            .item_img {
+                                float: left;
+                                width: 84px;
+                                height: 84px;
+                                position: relative;
+                                img {
+                                    width: 100%;
+                                }
+                                p {
+                                    position: absolute;
+                                    bottom: 0;
+                                    height: 16px;
+                                    line-height: 16px;
+                                    text-align: center;
+                                    background: rgba(0, 0, 0, 0.6);
+                                    font-size: 11px;
+                                    color: #fff;
+                                    width: 100%;
+                                }
+                            }
+                            .item_detail {
+                                float: left;
+                                width: 75px;
+                                margin-left: 6px;
+                                line-height: 16px;
+                                .item_name {
+                                    color: #333;
+                                    font-size: 12px;
+
+                                    height: 32px;
+                                    overflow: hidden;
+                                }
+                                .item_ptice {
+                                    font-size: 12px;
+                                    margin-top: 5px;
+
+                                    font-weight: bold;
+                                    color: @JDcolor;
+                                    span {
+                                        font-size: 14px;
+                                    }
+                                }
+                                .soldMsg {
+                                    font-size: 12px;
+                                    color: #999;
+                                    margin-top: 14px;
+                                    span {
+                                        color: @JDcolor;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
