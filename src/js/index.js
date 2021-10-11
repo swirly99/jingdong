@@ -1,9 +1,61 @@
 import Swiper from "https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js";
+$("#promoTop_close").click(function () {
+    $(".promotional-top").css("display", "none");
+    $(".leftNav").css("top", $(".seckill").offset().top);
+});
+
+$(window).scroll(function () {
+    // top 搜索框位置
+    if ($(".seckill").offset().top - $(document).scrollTop() <= 72) {
+        $(".header").addClass("header_fix");
+        $(".leftNav").addClass("leftNav_fix");
+        $(".leftNav").removeAttr("style");
+    } else {
+        $(".header").removeClass("header_fix");
+        $(".leftNav").removeClass("leftNav_fix");
+        $(".leftNav").css("top", $(".seckill").offset().top);
+    }
+
+    //Recommend_tab 位置
+    let recommend = document.getElementsByClassName("Recommend")[0];
+    let rectopbound = recommend.getBoundingClientRect().top;
+    if (rectopbound <= 0) {
+        $(".Recommend_tab").addClass("recommend_fix");
+        $(".leftNav").addClass("leftNav_fix_recommend");
+    } else {
+        $(".Recommend_tab").removeClass("recommend_fix");
+        $(".leftNav").removeClass("leftNav_fix_recommend");
+    }
+
+    //letNav li left_active
+    $(".leftNav li").each(function (i, ele) {
+        if ($(ele).attr("data-title")) {
+            let offsetId = "." + $(ele).attr("data-title");
+            if ($(document).scrollTop() >= $(offsetId).offset().top - 72) {
+                $(".leftNav li").eq(i).addClass("left_active").siblings().removeClass("left_active");
+            }
+        }
+    });
+});
+
+//单击跳转
+$(".leftNav li").click(function () {
+    if ($(this).attr("data-title")) {
+        let place = "." + $(this).attr("data-title");
+        let scrolltop = $(place).offset().top - 72;
+        $("html").animate({ scrollTop: scrolltop }, 300);
+        $(this).addClass("left_active").siblings().removeClass("left_active");
+    }
+});
+$(".toTop").click(function () {
+    $("html").animate({ scrollTop: 0 }, 300);
+});
+
 //banner left nav menu
 // 获取banner下的leftMenu数据
 $.getJSON("../json/bannerleftMenu.json", function (data) {
     $(".left>ul>li").hover(
-        function (ev) {
+        function () {
             let id = this.id;
             leftMenu(data[id]);
         },
@@ -221,7 +273,7 @@ $(".mininav .close").click(function () {
     $("#hotel .text").removeClass("textHover");
 });
 
-//seckill
+//seckill countdown
 setInterval(() => {
     let date = new Date();
     let session = date.getHours() % 2 ? date.getHours() - 1 : date.getHours();
@@ -233,19 +285,6 @@ setInterval(() => {
     $(".seckill .minute").text(minute);
     $(".seckill .second").text(second);
 }, 1000);
-
-//seckill center swiper
-function create_seckillswiper() {
-    const seckillswiper = new Swiper(".swiper-seckill", {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-}
 
 //seckill center swiper
 $.getJSON("../json/seckillcenter.json", function (data) {
@@ -268,3 +307,178 @@ $.getJSON("../json/seckillcenter.json", function (data) {
     $(".swiper-seckill .swiper-wrapper").html(seckill_slide);
     create_seckillswiper();
 });
+//seckill center  create seckillswiper
+function create_seckillswiper() {
+    const seckillswiper = new Swiper(".swiper-seckill", {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+}
+
+//special f1 Left choiceness
+//获取数据
+$.getJSON("../json/specialf1Left.json", function (data) {
+    specialf1(data.choiceness);
+    $(".f1_header li").mouseenter(function () {
+        let id = this.id;
+        $(this).children()[0].classList.add("f1header_active");
+        let otherEl = $(this).siblings().children();
+        for (let key in otherEl) {
+            if (otherEl[key].className) {
+                otherEl[key].classList.remove("f1header_active");
+            }
+        }
+        specialf1(data[id]);
+    });
+});
+//拼接数据
+function specialf1(data) {
+    let leftContent = "";
+    if (data.minimum[0]) {
+        leftContent = `<p class="sign">${data.minimum[0]}</p>`;
+    }
+    leftContent += `<img src="../img/${data.img[0]}" alt="" />
+    <p class="headline">${data.title[0]}</p>
+    <p class="price">￥<span>${data.price[0]}</span></p>
+    <p class="soldMsg">${data.sales[0].slice(0, 2)} <span>${data.sales[0].slice(2, -1)}</span>${data.sales[0].slice(
+        -1
+    )}</p>`;
+    $(".f1_left .f1_detail .left_content").html(leftContent);
+    let rightContent = "";
+    for (let i = 1; i < data.img.length; i++) {
+        rightContent += ` <div class="f1r_item">
+        <div class="item_img">
+            <img src="../img/${data.img[i]}" alt="" />
+            <p>${data.minimum[i]}</p>
+        </div>
+        <div class="item_detail">
+            <p class="item_name">${data.title[i]}</p>
+            <p class="item_ptice">￥ <span>${data.price[i]}</span></p>
+            <p class="soldMsg">${data.sales[i].slice(0, 2)} <span>${data.sales[i].slice(2, -1)}</span>${data.sales[
+            i
+        ].slice(-1)}</p>
+        </div>
+    </div>`;
+    }
+    $(".f1_left .f1_detail .right_content").html(rightContent);
+}
+
+//special f2
+const f2swiper = new Swiper(".swiper-f2List", {
+    slidesPerView: 5,
+    spaceBetween: 50,
+    slidesPerGroup: 1,
+    loop: true,
+    freeMode: true,
+    speed: 3000,
+    autoplay: {
+        delay: 0,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+        draggable: true,
+        dragSize: 99,
+    },
+});
+
+//special f3
+//special f3 one
+const f3swiper = new Swiper(".swiper-f3List", {
+    slidesPerView: 3,
+    slidesPerGroup: 1,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+    autoplay: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+//special f3 two
+$.getJSON("../json/specialf3Left.json", (data) => {
+    specialF3TwoHtml(data);
+    $(".f3_two .det_tab li").mouseenter(function () {
+        specialF3TwoHtml(data, this.id, this);
+    });
+});
+function specialF3TwoHtml(data, thisId = "changePhone", that) {
+    let det_item = ``;
+    for (let i = 0; i < data[thisId].img.length; i++) {
+        det_item += `
+        <div class="det_item">
+            <a href="javascript:;">
+                <img src="../img/${data[thisId].img[i]}" alt="" />
+                <div class="det_info">
+                    <p class="det_infoName">
+                    ${data[thisId].title[i]}
+                    </p>
+                    <p class="det_infoPrice"><span>￥</span>${data[thisId].price[i]}</p>
+                </div>
+            </a>
+        </div>
+        `;
+    }
+    $(".f3_two .det_content").html(det_item);
+    $(that).attr("class", "f3_active").siblings().removeClass("f3_active");
+}
+
+//channels channls_item
+$.getJSON("../json/channlsItem.json", (data) => {
+    let channlsItem = "";
+    for (let i = 0; i < data.title.length; i++) {
+        channlsItem += `<div class="channls_item">
+        <a href="javascript:;">
+            <h3>${data.title[i]}<span>${data.subTitle[i]}</span></h3>
+            <img src="../img/${data.leftImg[i]}" alt="" />
+            <img src="../img/${data.RightImg[i]}" alt="" />
+        </a>
+    </div>`;
+    }
+    $(".channelsInner").append(channlsItem);
+});
+
+//Recommend
+$.getJSON("../json/recommend.json", function (data) {
+    recommendItem(data);
+    $(".Recommend_tab li").click(function () {
+        recommendItem(data, this.id);
+        $(this).attr("class", "Recommend_active").siblings().removeClass("Recommend_active");
+        $(document).scrollTop($(".Recommend").offset().top - 10);
+    });
+});
+function recommendItem(data, thisId = "choiceness") {
+    let reItem = ``;
+    for (let i = 0; i < data[thisId].img.length; i++) {
+        reItem += `<div class="Recommend_item">
+            <img src="../img/${data[thisId].img[i]}" alt="" />
+            <p class="title">${data[thisId].title[i]}</p>
+            <p class="price">
+                <span>￥</span>${data[thisId].price[i].slice(0, -2)}<span>.${data[thisId].price[i].slice(-2)}</span>
+            </p>
+            <div class="Recommend_item_hover">
+                <i class="iconfont icon-31guanbi"></i>
+                <div class="similarity_btn">
+                    <button>
+                        <i class="iconfont icon-yanjing"></i>
+                        找相似
+                    </button>
+                </div>
+            </div>
+        </div>`;
+    }
+    $(".Recommend_info").html(reItem);
+}

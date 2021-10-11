@@ -1,12 +1,97 @@
 {
     "choiceness": {
-        "img": [],
-        "title": [],
-        "price": []
+        "img": [
+            "specialf1Leftchoiceness1.jpg.webp",
+            "specialf1Leftchoiceness2.jpg.webp",
+            "specialf1Leftchoiceness3.jpg.webp",
+            "specialf1Leftchoiceness4.jpg.webp",
+            "specialf1Leftchoiceness5.jpg.webp"
+        ],
+        "title": [
+            "洁厕灵蓝泡泡 20个装",
+            "爱护佳 成人儿童医用外科口罩",
+            "片仔癀灵芝抗皱紧致精华液40ml",
+            "全触智能手环测心率血压血氧",
+            "平口垃圾袋100只装"
+        ],
+        "price": ["6.9", "6.3", "215", "158", "5.8"],
+        "minimum": ["1年最低价", "", "302天最低价", "163天最低价", "164天最低价"],
+        "sales": ["已抢169件", "", "", "", "已抢203件"]
     },
     "food": {
-        "img": [],
-        "title": [],
-        "price": []
+        "img": [
+            "specialf1Leftfood1.jpg.webp",
+            "specialf1Leftfood2.jpg.webp",
+            "specialf1Leftfood3.jpg.webp",
+            "specialf1Leftfood4.jpg.webp",
+            "specialf1Leftfood5.jpg.webp"
+        ],
+        "title": [
+            "天山雪莲果5斤",
+            "重庆友军香脆椒400g",
+            "豆皮【袋装1500克】",
+            "红薏米芡湿茶 共3盒",
+            "新西兰青口贝500g袋装"
+        ],
+        "price": ["16.9", "16.9", "13.9", "39.8", "68"],
+        "minimum": ["74天最低价", "197天最低价", "1年最低价", "94天最低价", "1年最低价"],
+        "sales": ["", "已抢112件", "", "", ""]
+    },
+    "generalMerchandise": {
+        "img": [
+            "specialf1LeftgeneralMerchandise1.jpg.webp",
+            "specialf1LeftgeneralMerchandise2.jpg.webp",
+            "specialf1LeftgeneralMerchandise3.jpg.webp",
+            "specialf1LeftgeneralMerchandise4.jpg.webp",
+            "specialf1LeftgeneralMerchandise5.jpg.webp"
+        ],
+        "title": [
+            "欣美雅玻璃饭盒密封保鲜盒",
+            "优诺康疏通剂 4瓶装",
+            "FineX厨房油污净500g*2",
+            "日本家用墙体除霉剂除霉啫喱",
+            "恒源祥全棉被套单件纯棉印花"
+        ],
+        "price": ["9.9", "26.8", "12.9", "15", "98"],
+        "minimum": ["115天最低价", "1年最低价", "190天最低价", "112天最低价", "217天最低价"],
+        "sales": ["已抢146件", "已抢172件", "", "已抢116件", ""]
+    },
+    "personalCare": {
+        "img": [
+            "specialf1LeftpersonalCare1.jpg.webp",
+            "specialf1LeftpersonalCare2.jpg.webp",
+            "specialf1LeftpersonalCare3.jpg.webp",
+            "specialf1LeftpersonalCare4.jpg.webp",
+            "specialf1LeftpersonalCare5.jpg.webp"
+        ],
+        "title": [
+            "维特丝 哑光立体蓬松发蜡100g",
+            "瑶浴云南瑶浴正品泡澡约包",
+            "【告别牙黄】牙斑净洗牙黑黄",
+            "金卧佛牌泰国青草膏原装正品",
+            "苏菲小翅膀175mm"
+        ],
+        "price": ["25", "58", "26", "22.8", "25.8"],
+        "minimum": ["115天最低价", "1年最低价", "190天最低价", "112天最低价", "217天最低价"],
+        "sales": ["已抢108件", "已抢112件", "", "", ""]
+    },
+    "advanceNotice": {
+        "img": [
+            "specialf1LeftadvanceNotice1.jpg.webp",
+            "specialf1LeftadvanceNotice2.jpg.webp",
+            "specialf1LeftadvanceNotice3.jpg.webp",
+            "specialf1LeftadvanceNotice4.jpg.webp",
+            "specialf1LeftadvanceNotice5.jpg.webp"
+        ],
+        "title": [
+            "秋装新款休闲圆领套头卫衣女",
+            "李佳琦推荐！收缩毛孔21天精华",
+            "肉松饼1斤+绿豆饼1斤",
+            "电动车头盔",
+            "满婷 清满洗发露沐浴露套装"
+        ],
+        "price": ["59", "49", "19.8", "39", "79"],
+        "minimum": ["", "", "", "", ""],
+        "sales": ["", "", "", "", ""]
     }
 }

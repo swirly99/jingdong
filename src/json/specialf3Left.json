@@ -1,0 +1,38 @@
+{
+    "changePhone": {
+        "img": ["specialf3TowCP1.webp", "specialf3TowCP2.webp", "specialf3TowCP3.webp"],
+        "title": [
+            "【二手99新】华为Mate 30 RS 保时捷5G版 麒麟990芯片 OLED环幕屏双4000万徕卡 黑色【赠40W快充】 12GB+512GB",
+            "KaFni 卡飞尼（KaFni） 华为荣耀mate20X/mate20 mate30内外显示屏幕总成 mate20X黑色总成  不寄修，只买屏",
+            "京修 【免费取送】ipad维修苹果平板维修2/3/4/5/6更换屏幕主板WIFI不开机进水维修 ipad pro【11英寸】 外屏碎寄修价格"
+        ],
+        "price": ["6299.00", "465.00", "1060.00"]
+    },
+    "newPhone": {
+        "img": ["specialf3TowNP1.webp", "specialf3TowNP2.webp", "specialf3TowNP3.webp"],
+        "title": [
+            "纽曼（Newman）N99 三防老人手机 超长待机大字体大声音 充电宝功能老年手机 移动2G按键备用功能手机 黑色",
+            "多亲（QIN） Qin 1s +AI学生电话VoLTE老人手机双卡双待 移动联通4G 功能直板手机 瓷白色",
+            "多亲（QIN）Qin 2 Pro助手2+64g 学生手机 全面屏智能超薄老人手机备机 移动联通4g 铁灰色"
+        ],
+        "price": ["99.00", "379.00", "799.00"]
+    },
+    "phoneFreak": {
+        "img": ["specialf3TowPF1.webp", "specialf3TowPF2.webp", "specialf3TowPF3.webp"],
+        "title": [
+            "科巧 大容量充电宝30000毫安时 华为22.5W超级快充20W苹果PD移动电源支持18W双向快充 奢华黑【尊享版+22.5W超级快充】提速100%",
+            "电沃达 充电宝30000毫安时自带线适用华为超级快充22.5W移动电源18W苹果PD快充手机 旗舰版【22.5W超级快充】炫酷黑+提速200%",
+            "蓝牙耳机无线适用华为苹果荣耀安卓oppo华强北vivo小米一加超长待机跑步运动CSM 【全新四代顶配版】七仓发货/次日送达"
+        ],
+        "price": ["118.00", "115.00", "209.00"]
+    },
+    "boyMust": {
+        "img": ["specialf3TowBM1.webp", "specialf3TowBM2.webp", "specialf3TowBM3.webp"],
+        "title": [
+            "realme 真我GT 骁龙888 120Hz屏幕65W闪充 银河战舰 12G+256GB",
+            "vivo iQOO 7手机5G双模高通骁龙888 120W超快闪充120Hz全感屏电竞游戏智能手机 传奇版12GB 256GB 全网通",
+            "【顺丰速发】vivo iQOO Neo5 5G双模 全网通 高通骁龙870独立显示芯片 66W闪充 夜影黑【Neo 5】 8+256G"
+        ],
+        "price": ["2929.00", "4198.00", "2699.00"]
+    }
+}
