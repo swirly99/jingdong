@@ -1,3 +1,5 @@
+@import "common.less";
+@import "footer.less";
 .header {
     width: 990px;
     margin: 0 auto;
@@ -5,9 +7,12 @@
     display: flex;
     justify-content: space-between;
     .logo {
-        width: 134px;
-        height: 42px;
-        background-image: url(../img/jdlogo-201708-@1x.png);
+        a {
+            display: block;
+            width: 134px;
+            height: 42px;
+            background-image: url(../img/jdlogo-201708-@1x.png);
+        }
     }
     .search {
         border: 2px solid #c91623;
@@ -45,6 +50,7 @@
         justify-content: space-between;
         padding-top: 10px;
         height: 40px;
+        margin-bottom: 10px;
         .allProducts {
             color: #e2231a;
             line-height: 40px;
@@ -347,7 +353,7 @@
 }
 .guess {
     width: 990px;
-    margin: 28px auto 0;
+    margin: 28px auto;
     overflow: hidden;
     ul {
         overflow: hidden;

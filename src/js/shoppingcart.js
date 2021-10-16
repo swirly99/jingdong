@@ -1,6 +1,8 @@
 import Swiper from "https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js";
 import $ from "./library/jquery.js";
 import cookie from "./library/cookie.js";
+//引入footer
+$("footer").load("footer.html");
 const guessSwiper = new Swiper(".guess-swiper", {
     navigation: {
         nextEl: ".swiper-button-next",
