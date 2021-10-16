@@ -1,0 +1,475 @@
+.header {
+  width: 990px;
+  margin: 0 auto;
+  padding: 27px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo {
+  width: 134px;
+  height: 42px;
+  background-image: url(../img/jdlogo-201708-@1x.png);
+}
+.header .search {
+  border: 2px solid #c91623;
+  font-size: 0;
+  height: 27px;
+}
+.header .search input {
+  border: 0;
+  height: 18px;
+  line-height: 18px;
+  width: 260px;
+  padding: 3px 5px;
+  outline: none;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.header .search button {
+  width: 48px;
+  height: 24px;
+  background: #c91623;
+  text-align: center;
+  color: #fff;
+  padding: 0;
+  border: none;
+  font-size: 12px;
+  font-weight: bolder;
+  vertical-align: middle;
+}
+.center {
+  width: 990px;
+  margin: 0 auto;
+}
+.center .title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  height: 40px;
+}
+.center .title .allProducts {
+  color: #e2231a;
+  line-height: 40px;
+  font-weight: bolder;
+}
+.center .title .allProducts span {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.center .title .toArea {
+  font-size: 12px;
+}
+.center .headline {
+  height: 42px;
+  border: 1px solid #e9e9e9;
+  border-top: none;
+  background: #f3f3f3;
+  margin-bottom: 10px;
+}
+.center .headline ul {
+  display: flex;
+}
+.center .headline ul li {
+  list-style: none;
+  line-height: 42px;
+  font-size: 12px;
+}
+.center .headline ul li input {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.center .headline ul .t_checkbox {
+  width: 133px;
+  padding-left: 11px;
+}
+.center .headline ul .t_goods {
+  width: 315px;
+}
+.center .headline ul .t_price {
+  width: 170px;
+  margin-right: 50px;
+  text-align: right;
+}
+.center .headline ul .t_num {
+  width: 80px;
+  text-align: center;
+}
+.center .headline ul .t_sum {
+  width: 140px;
+  margin-right: 40px;
+  text-align: right;
+}
+.center .headline ul .t_active {
+  width: 75px;
+}
+.center .productList .productItem {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.center .productList .productItem .p_title {
+  border-bottom: 2px solid #aaa;
+  height: 30px;
+  line-height: 30px;
+}
+.center .productList .productItem .p_title input {
+  margin-left: 11px;
+}
+.center .productList .productItem .p_title label {
+  font-size: 12px;
+  font-weight: bolder;
+  margin-left: 8px;
+}
+.center .productList .productItem .p_title i {
+  color: #6399ff;
+  margin-left: 5px;
+}
+.center .productList .productItem .p_body {
+  border: 1px solid #f1f1f1;
+  border-bottom: none;
+  border-top: none;
+}
+.center .productList .productItem .p_body .p_body_tips {
+  border-top: 1px solid #ccc;
+  height: 36px;
+  padding: 5px 10px;
+  line-height: 26px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.center .productList .productItem .p_body .p_body_tips > span {
+  display: inline-block;
+  background: #f48719;
+  border: 1px solid #f48719;
+  color: #fff;
+  padding: 0px 10px;
+  height: 16px;
+  line-height: 16px;
+  margin: 0 15px 0 5px;
+  position: relative;
+}
+.center .productList .productItem .p_body .p_body_tips > span::after {
+  position: absolute;
+  content: "";
+  border: 8px solid transparent;
+  border-bottom: none;
+  border-top-color: #f48719;
+  transform: rotate(-90deg);
+  bottom: -4px;
+  left: -5px;
+}
+.center .productList .productItem .p_body .p_body_tips > span::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 25px;
+  border-left: 1px dashed #eee;
+  bottom: -25px;
+  left: 0px;
+}
+.center .productList .productItem .p_body .p_body_tips .trade {
+  font-size: 12px;
+  color: #666;
+}
+.center .productList .productItem .p_body .p_body_tips .trade a {
+  margin-left: 5px;
+  color: #e2231a;
+  text-decoration: none;
+}
+.center .productList .productItem .p_body .p_body_tips .tips_price {
+  margin-left: auto;
+  padding-right: 125px;
+  color: #666;
+}
+.center .productList .productItem .p_body .p_body_content {
+  display: flex;
+  margin-left: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+  position: relative;
+}
+.center .productList .productItem .p_body .p_body_content #chouse {
+  position: absolute;
+  left: -29px;
+}
+.center .productList .productItem .p_body .p_body_content img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+.center .productList .productItem .p_body .p_body_content .pro_title {
+  width: 208px;
+  height: 40px;
+  overflow: hidden;
+}
+.center .productList .productItem .p_body .p_body_content .pro_title span {
+  padding: 0 5px;
+  height: 20px;
+  line-height: 20px;
+  background: #c90e1e;
+  color: #fff;
+  font-size: 12px;
+}
+.center .productList .productItem .p_body .p_body_content .pro_title a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #333;
+}
+.center .productList .productItem .p_body .p_body_content .pro_type {
+  width: 130px;
+  margin-left: 20px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.center .productList .productItem .p_body .p_body_content .pro_price {
+  width: 150px;
+  font-size: 12px;
+  text-align: right;
+  margin-right: 40px;
+}
+.center .productList .productItem .p_body .p_body_content .pro_number {
+  display: flex;
+}
+.center .productList .productItem .p_body .p_body_content .pro_number button {
+  width: 17px;
+  height: 20px;
+  text-align: center;
+  background: #f1f1f1;
+  border: 1px solid #cbcbcb;
+  padding: 0;
+}
+.center .productList .productItem .p_body .p_body_content .pro_number input {
+  height: 20px;
+  color: #232326;
+  border: 1px solid #cbcbcb;
+  background: #fff;
+  line-height: 20px;
+  width: 46px;
+  text-align: center;
+}
+.center .productList .productItem .p_body .p_body_content .pro_priceSum {
+  width: 100px;
+  text-align: right;
+  font-weight: bolder;
+  color: #333;
+  font-size: 12px;
+  margin-right: 40px;
+}
+.center .productList .productItem .p_body .p_body_content .buts {
+  font-size: 12px;
+  line-height: 20px;
+}
+.center .productList .productItem .p_body .p_body_content .buts .pro_del {
+  user-select: none;
+  cursor: pointer;
+}
+.fixSum {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 52px;
+  z-index: 99;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 -2px 4px #eee;
+}
+.fixSum .content {
+  height: 50px;
+  width: 988px;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.fixSum .content .s_left {
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
+}
+.fixSum .content .s_left input {
+  margin-right: 3px;
+}
+.fixSum .content .s_left p {
+  margin-left: 10px;
+  color: #666;
+}
+.fixSum .content .s_left p:hover {
+  color: #e2231a;
+}
+.fixSum .content .s_left .clearShoppingCart {
+  font-weight: bolder;
+}
+.fixSum .content .s_right {
+  display: flex;
+}
+.fixSum .content .s_right p {
+  margin-top: 7px;
+  color: #999;
+}
+.fixSum .content .s_right .hoveChosen {
+  margin-right: 10px;
+}
+.fixSum .content .s_right .hoveChosen span {
+  color: #e2231a;
+}
+.fixSum .content .s_right .allPrice {
+  font-size: 16px;
+  color: #e2231a;
+  font-weight: bolder;
+}
+.fixSum .content .s_right > i {
+  color: #fabb21;
+  font-weight: bolder;
+  margin-top: 7px;
+  margin-left: 8px;
+}
+.fixSum .content .s_right button {
+  margin-left: 20px;
+  height: 100%;
+  width: 94px;
+  font-size: 18px;
+  color: #fff;
+  background: #e64347;
+}
+.relataiveSum {
+  position: relative;
+  border: none;
+  box-shadow: none;
+}
+.relataiveSum .content {
+  border: 1px solid #eee;
+}
+.guess {
+  width: 990px;
+  margin: 28px auto 0;
+  overflow: hidden;
+}
+.guess ul {
+  overflow: hidden;
+}
+.guess ul li {
+  font-size: 12px;
+  margin-right: 35px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+  outline: none;
+  list-style: none;
+  float: left;
+}
+.guess ul li a {
+  text-decoration: none;
+  color: #434343;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.guess ul .active a {
+  color: #e2231a;
+  font-weight: 700;
+  border-color: #e2231a;
+}
+.guess .guess-swiper {
+  margin-top: 10px;
+  position: relative;
+}
+.guess .guess-swiper .guess_item {
+  color: #434343;
+  width: 206px;
+  border: 1px dashed #666;
+  border-right: none;
+  padding: 20px;
+  text-align: center;
+  float: left;
+}
+.guess .guess-swiper .guess_item:last-child {
+  border-right: 1px dashed #666;
+}
+.guess .guess-swiper .guess_item img {
+  width: 160px;
+  height: 164px;
+  margin: 0 23px;
+}
+.guess .guess-swiper .guess_item .item_name {
+  height: 36px;
+  line-height: 18px;
+  margin: 5px 0;
+  overflow: hidden;
+  cursor: pointer;
+  color: #333;
+}
+.guess .guess-swiper .guess_item .item_price {
+  width: 100%;
+  margin: 5px 0 2px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 14px;
+  color: #d91f20;
+  font-weight: bolder;
+}
+.guess .guess-swiper .guess_item button {
+  margin: 10px 0 0;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 20px;
+  border: 1px solid #999;
+  color: #666;
+  text-align: center;
+  border-radius: 3px;
+  background: #fff;
+}
+.guess .guess-swiper .guess_item:hover {
+  border: 1px solid #e2231a;
+}
+.guess .guess-swiper .guess_item:hover + .guess_item {
+  border-left: none;
+}
+.guess .guess-swiper:hover .swiper-button-next,
+.guess .guess-swiper:hover .swiper-button-prev {
+  display: block;
+}
+.guess .swiper-button-next,
+.guess .swiper-button-prev {
+  background: rgba(172, 172, 172, 0.301);
+  color: #aaa;
+  width: 40px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  font-size: 16px;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.guess .swiper-button-next:hover,
+.guess .swiper-button-prev:hover {
+  background: rgba(172, 172, 172, 0.473);
+}
+.guess .swiper-button-next {
+  right: 1px;
+}
+.guess .swiper-button-prev {
+  left: 1px;
+}
+.guess .swiper-container {
+  --swiper-navigation-color: #aaa;
+  /* 单独设置按钮颜色 */
+  --swiper-navigation-size: 30px;
+  /* 设置按钮大小 */
+  --swiper-pagination-color: #e2231a;
+}
+.guess .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 5px;
+}
+.guess .swiper-pagination {
+  position: absolute;
+  height: 20px;
+  top: -32px;
+  right: 0;
+  left: 94%;
+  width: fit-content;
+}

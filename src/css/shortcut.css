@@ -1,0 +1,430 @@
+.container {
+  width: 1190px;
+  margin: 0 auto;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+.clearfix::after,
+.clearfix::before {
+  display: table;
+  content: "";
+  clear: both;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.swiper-buttons,
+.swiper-button-next,
+.swiper-button-prev {
+  width: 25px;
+  height: 35px;
+  line-height: 35px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  transition: 0.2s;
+}
+.swiper-button-next {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  right: 0;
+}
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-next::before {
+  margin-right: -6px;
+}
+.swiper-button-next:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.swiper-button-prev {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  left: 0;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.swiper-button-prev::before {
+  margin-left: -6px;
+}
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+/*顶部导航*/
+.shortcut {
+  background: #e3e4e5;
+  border-bottom: 1px solid #ddd;
+}
+.shortcut .container {
+  height: 30px;
+}
+.shortcut .container .left {
+  float: left;
+}
+.shortcut .container .left:hover .dropdown a {
+  background: #fff;
+  color: #f10215;
+  border-color: #ccc;
+  height: 31px;
+}
+.shortcut .container .left:hover .chooseArea {
+  display: block;
+}
+.shortcut .container .left .dropdown {
+  z-index: 1000;
+  position: absolute;
+}
+.shortcut .container .left .dropdown a {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  line-height: 30px;
+  height: 30px;
+  text-decoration: none;
+  padding: 0 7px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-bottom: 0;
+}
+.shortcut .container .left .dropdown a .iconfont {
+  color: #f10215;
+}
+.shortcut .container .left .chooseArea {
+  position: absolute;
+  z-index: 100;
+  display: none;
+  width: 322px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  background: #fff;
+}
+.shortcut .container .left .chooseArea ul {
+  overflow: hidden;
+  font-size: 12px;
+  margin: 10px 0 0 10px;
+}
+.shortcut .container .left .chooseArea ul::before {
+  display: block;
+  content: "";
+  width: 262px;
+  height: 1px;
+  border-bottom: 1px dotted #eee;
+}
+.shortcut .container .left .chooseArea ul li {
+  float: left;
+  width: 145px;
+  line-height: 26px;
+}
+.shortcut .container .left .chooseArea ul li i {
+  font-size: 12px;
+}
+.shortcut .container .left .chooseArea ul li a {
+  display: inline-block;
+  color: #999;
+  text-decoration: none;
+}
+.shortcut .container .left .chooseArea ul li a .country {
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  background: url(../img/countrySprite.png) no-repeat;
+  margin-right: 8px;
+}
+.shortcut .container .left .chooseArea ul li a:hover {
+  color: #e33333;
+}
+.shortcut .container .left .chooseArea ul li.title {
+  width: 100%;
+  color: #999;
+  line-height: 48px;
+}
+.shortcut .container .left .chooseArea ul:first-child {
+  margin: 0;
+}
+.shortcut .container .left .chooseArea ul:first-child::before {
+  display: none;
+}
+.shortcut .container .left .chooseArea ul:first-child li {
+  width: 60px;
+  padding: 2px 0;
+}
+.shortcut .container .left .chooseArea ul:first-child li a {
+  padding: 0 8px;
+  text-align: center;
+  line-height: 30px;
+}
+.shortcut .container .left .chooseArea ul:first-child li a:hover {
+  background: #f4f4f4;
+}
+.shortcut .container .left .chooseArea ul:first-child li a.active {
+  color: #fff;
+  background: #f10215;
+}
+.shortcut .container .left .chooseArea ul:last-child li:nth-child(2) .country {
+  height: 12px;
+  background-position: -1px 0;
+}
+.shortcut .container .left .chooseArea ul:last-child li:nth-child(3) .country {
+  background-position: -20px 0;
+  border: 1px solid #ebebeb;
+}
+.shortcut .container .left .chooseArea ul:last-child li:nth-child(4) .country {
+  background-position: 0 -17px;
+  border: 1px solid #ebebeb;
+}
+.shortcut .container .left .chooseArea ul:last-child li:nth-child(5) .country {
+  background-position: -40px 0;
+}
+.shortcut .container .left .chooseArea ul:last-child li:nth-child(6) .country {
+  background-position: -20px -17px;
+}
+.shortcut .container .right {
+  float: right;
+}
+.shortcut .container .right ul {
+  margin: 0;
+  position: relative;
+}
+.shortcut .container .right ul li {
+  float: left;
+  list-style: none;
+}
+.shortcut .container .right ul li::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 10px;
+  background: #ccc;
+  margin: 10px 5px 0px;
+}
+.shortcut .container .right ul li:last-child::after {
+  display: none;
+}
+.shortcut .container .right ul li a {
+  display: inline-block;
+  font-size: 12px;
+  color: #999;
+  text-decoration: none;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 7px;
+}
+.shortcut .container .right ul li a span.JDcolor {
+  color: #f10215;
+}
+.shortcut .container .right ul li a span.hoverJDcolor:hover {
+  color: #f10215;
+}
+.shortcut .container .right ul li a i {
+  font-size: 12px;
+}
+.shortcut .container .right ul li .top_login {
+  padding: 0;
+}
+.shortcut .container .right ul li .secNav-wrapper {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  vertical-align: top;
+}
+.shortcut .container .right ul li .secNav-wrapper:hover > a {
+  color: #f10215;
+  background: #fff;
+  border-color: #ccc;
+  height: 31px;
+}
+.shortcut .container .right ul li .secNav-wrapper > a {
+  float: left;
+  position: relative;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  z-index: 100;
+}
+.shortcut .container .right ul li .secNav-wrapper > a:hover + .secNav {
+  display: block;
+}
+.shortcut .container .right ul li .secNav-wrapper .secNav {
+  display: none;
+  position: absolute;
+  margin-top: 30px;
+  width: 280px;
+  border: 1px solid #ccc;
+  box-sizing: content-box;
+  background: #fff;
+}
+.shortcut .container .right ul li .secNav-wrapper .secNav:hover {
+  display: block;
+}
+.shortcut .container .right ul li .secNav-wrapper .secNav ul {
+  padding: 10px 0 10px 15px;
+  overflow: hidden;
+}
+.shortcut .container .right ul li .secNav-wrapper .secNav ul li {
+  width: 126px;
+}
+.shortcut .container .right ul li .secNav-wrapper .secNav ul li a {
+  line-height: 24px;
+  height: 24px;
+  padding: 0;
+}
+.shortcut .container .right ul li .secNav-wrapper .secNav ul li a:hover {
+  color: #f10215;
+}
+.shortcut .container .right ul li .secNav-wrapper .secNav ul li::after {
+  display: none;
+}
+.shortcut .container .right ul li .secNav-wrapper .secNav ul:first-child {
+  border-bottom: 1px solid #f1f1f1;
+}
+.shortcut .container .right ul li .secNav-wrapper .purch {
+  width: 155px;
+}
+.shortcut .container .right ul li .secNav-wrapper .purch ul li {
+  width: 56px;
+  white-space: nowrap;
+}
+.shortcut .container .right ul li .secNav-wrapper .serve {
+  width: 170px;
+  right: 0;
+}
+.shortcut .container .right ul li .secNav-wrapper .serve ul li {
+  width: 70px;
+  white-space: nowrap;
+}
+.shortcut .container .right ul li .secNav-wrapper .serve ul li:nth-child(2n + 1) {
+  padding-left: 15px;
+}
+.shortcut .container .right ul li .secNav-wrapper .serve ul li:first-child {
+  width: 100%;
+  font-weight: bold;
+  padding: 0;
+}
+.shortcut .container .right ul li .secNav-wrapper .serve ul li:first-child a {
+  color: #000;
+}
+.shortcut .container .right ul li .secNav-wrapper .serve ul:first-child {
+  padding-bottom: 5px;
+}
+.shortcut .container .right ul li .secNav-wrapper .serve ul:last-child {
+  padding-top: 5px;
+}
+.shortcut .container .right ul li .secNav-wrapper .webnav {
+  width: 1188px;
+  padding: 15px 0;
+  right: -77px;
+}
+.shortcut .container .right ul li .secNav-wrapper .webnav ul {
+  padding: 0 0 0 20px;
+  border-left: 1px solid #eee;
+  border-bottom: 0;
+  float: left;
+  width: 255px;
+}
+.shortcut .container .right ul li .secNav-wrapper .webnav ul:first-child {
+  width: 340px;
+  border-left: 0;
+  border-bottom: 0;
+}
+.shortcut .container .right ul li .secNav-wrapper .webnav ul li {
+  width: 85px;
+}
+.shortcut .container .right ul li .secNav-wrapper .webnav ul li:first-child {
+  width: 100%;
+  font-weight: bold;
+}
+.shortcut .container .right ul li .secNav-wrapper .webnav ul li:first-child a {
+  color: #000;
+}
+.shortcut .container .right ul li .serve-wrapper:hover > a,
+.shortcut .container .right ul li .webnav-wrapper:hover > a {
+  color: #999;
+}
+.shortcut .container .right ul li:last-child {
+  position: relative;
+}
+.shortcut .container .right ul li:last-child ul {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  z-index: 10;
+  border: 1px solid #cfcfcf;
+  border-bottom: 3px solid #60575a;
+  width: 190px;
+}
+.shortcut .container .right ul li:last-child ul::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: 153px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top: none;
+  border-bottom-color: #fff;
+}
+.shortcut .container .right ul li:last-child ul li {
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid #cfcfcf;
+}
+.shortcut .container .right ul li:last-child ul li .mobileImg {
+  width: 74px;
+  height: 74px;
+  float: left;
+  margin-left: 5px;
+  padding: 2px;
+  border: 1px solid #ccc;
+}
+.shortcut .container .right ul li:last-child ul li .mobileImg img {
+  width: 100%;
+}
+.shortcut .container .right ul li:last-child ul li .mobileText {
+  float: left;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.shortcut .container .right ul li:last-child ul li .mobileText h5 {
+  color: #666;
+  line-height: 17px;
+}
+.shortcut .container .right ul li:last-child ul li .mobileText p {
+  color: #f10214;
+  line-height: 14px;
+  margin: 3px 0;
+}
+.shortcut .container .right ul li:last-child ul li .mobileText span a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../img/sprite_mobile@1x.png) no-repeat 0 0/100%;
+}
+.shortcut .container .right ul li:last-child ul li .mobileText span a:nth-child(2) {
+  background-position-y: -26px;
+}
+.shortcut .container .right ul li:last-child ul li .mobileText span a:nth-child(3) {
+  background-position-y: -52px;
+}
+.shortcut .container .right ul li:last-child ul li::after {
+  display: none;
+}
+.shortcut .container .right ul li:last-child:hover ul {
+  display: block;
+}

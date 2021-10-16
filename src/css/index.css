@@ -9,6 +9,12 @@ ul {
 ul li {
   list-style: none;
 }
+.clearfix::after,
+.clearfix::before {
+  display: table;
+  content: "";
+  clear: both;
+}
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -59,31 +65,196 @@ ul li {
 .swiper-button-prev:hover {
   background: rgba(0, 0, 0, 0.4);
 }
-body {
-  background: #f4f4f4;
-  position: relative;
+/*footer*/
+/*top*/
+.footer .f_top {
+  padding: 30px 0;
+  border-bottom: 1px solid #dedede;
 }
-/*顶部推广广告*/
-.promotional-top {
-  background: #fbf9f9;
+.footer .f_top ul::after {
+  display: table;
+  content: "";
+  clear: both;
 }
-.promotional-top .container {
-  height: 80px;
-  background: url(../img/promotionalTop.webp) no-repeat center 100%;
-  position: relative;
+.footer .f_top ul li {
+  float: left;
+  width: 297px;
 }
-.promotional-top .container .close {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #2d2d2d;
-  opacity: 0.3;
-  top: 5px;
-  right: 0;
-  color: #fff;
+.footer .f_top ul li i {
+  float: left;
+  width: 36px;
+  height: 42px;
+  background-image: url(../img/footerSprite.png);
+  margin-right: 9px;
+}
+.footer .f_top ul li p {
+  line-height: 42px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #444;
+}
+.footer .f_top ul li:nth-child(1) i {
+  background-position: 0 -192px;
+}
+.footer .f_top ul li:nth-child(2) i {
+  background-position: -41px -192px;
+}
+.footer .f_top ul li:nth-child(3) i {
+  background-position: -82px -192px;
+}
+.footer .f_top ul li:nth-child(4) i {
+  background-position: -123px -192px;
+}
+.footer .f_center {
+  padding: 20px 0;
+  border-bottom: 1px solid #dedede;
+  overflow: hidden;
+}
+.footer .f_center ul {
+  float: left;
+  width: 198px;
+}
+.footer .f_center ul li {
+  font-size: 12px;
+  line-height: 22px;
+  color: #666;
+}
+.footer .f_center ul li:first-child {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.footer .f_center ul li a {
+  color: #666;
+  text-decoration: none;
+}
+.footer .f_center ul li a:hover {
+  color: #e1251b;
+}
+.footer .f_center ul li:not(:first-child) a:hover {
+  color: #e1251b;
+}
+.footer .f_center div {
+  float: left;
+  width: 200px;
+}
+.footer .f_center div h4 {
+  font-size: 14px;
+  line-height: 22px;
+  color: #666;
+  margin-bottom: 15px;
   text-align: center;
-  line-height: 20px;
-  font-weight: 600;
+}
+.footer .f_center div p {
+  font-size: 12px;
+  color: #666;
+  padding: 0 10px;
+  line-height: 18px;
+}
+.footer .f_center div .f_c_det {
+  float: right;
+  cursor: pointer;
+}
+.footer .f_center div .f_c_det i {
+  font-size: 12px;
+  line-height: 12px;
+}
+.footer .f_center div .f_c_det:hover {
+  color: #e1251b;
+}
+.footer .f_btm {
+  padding: 15px 0;
+}
+.footer .f_btm ul {
+  margin: 0 auto;
+  width: fit-content;
+  overflow: hidden;
+}
+.footer .f_btm ul li {
+  float: left;
+  font-size: 12px;
+}
+.footer .f_btm ul li:not(:last-child):after {
+  display: inline-block;
+  content: "|";
+  margin: 0 10px;
+  color: #ccc;
+}
+.footer .f_btm ul li a {
+  color: #666;
+  text-decoration: none;
+}
+.footer .f_btm ul li a:hover {
+  color: #e1251b;
+}
+.footer .f_btm .f_btm_info {
+  margin-top: 10px;
+  line-height: 22px;
+  color: #999;
+  font-size: 12px;
+}
+.footer .f_btm .f_btm_info ul {
+  overflow: hidden;
+}
+.footer .f_btm .f_btm_info ul li a {
+  color: #999;
+}
+.footer .f_btm .f_btm_info ul li i {
+  width: 15px;
+  height: 12px;
+  background-image: url(../img/footerSprite.png);
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+.footer .f_btm .f_btm_info ul li:nth-child(1) i {
+  background-position: -108px -155px;
+}
+.footer .f_btm .f_btm_info ul li:nth-child(2) i {
+  background-position: -168px -155px;
+}
+.footer .f_btm .f_btm_info ul li:nth-child(3) i {
+  background-position: -148px -155px;
+}
+.footer .f_btm .f_btm_info ul li:nth-child(4) i {
+  background-position: -128px -155px;
+}
+.footer .f_btm .f_btm_info ul li:nth-child(5) i {
+  background-position: -108px -172px;
+}
+.footer .f_btm .f_btm_ico {
+  margin: 25px auto;
+}
+.footer .f_btm .f_btm_ico li a {
+  display: inline-block;
+  margin: 0 3px;
+  width: 103px;
+  height: 32px;
+  background-image: url(../img/footerSprite.png);
+}
+.footer .f_btm .f_btm_ico li:nth-child(1) a {
+  background-position: -205px -111px;
+}
+.footer .f_btm .f_btm_ico li:nth-child(2) a {
+  background-position: -205px -74px;
+}
+.footer .f_btm .f_btm_ico li:nth-child(3) a {
+  background-position: -205px -37px;
+}
+.footer .f_btm .f_btm_ico li:nth-child(4) a {
+  background-image: url(../img/footerSprite2.png);
+  background-position: 0 -66px;
+}
+.footer .f_btm .f_btm_ico li:nth-child(5) a {
+  background-position: 0 -155px;
+}
+.footer .f_btm .f_btm_ico li:nth-child(6) a {
+  background-image: url(../img/footerSprite2.png);
+  background-position: 0 -99px;
+}
+.footer .f_btm .f_btm_ico li::after {
+  display: none !important;
 }
 /*顶部导航*/
 .shortcut {
@@ -253,6 +424,9 @@ body {
 }
 .shortcut .container .right ul li a i {
   font-size: 12px;
+}
+.shortcut .container .right ul li .top_login {
+  padding: 0;
 }
 .shortcut .container .right ul li .secNav-wrapper {
   position: relative;
@@ -444,6 +618,32 @@ body {
 }
 .shortcut .container .right ul li:last-child:hover ul {
   display: block;
+}
+body {
+  background: #f4f4f4;
+  position: relative;
+}
+/*顶部推广广告*/
+.promotional-top {
+  background: #fbf9f9;
+}
+.promotional-top .container {
+  height: 80px;
+  background: url(../img/promotionalTop.webp) no-repeat center 100%;
+  position: relative;
+}
+.promotional-top .container .close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #2d2d2d;
+  opacity: 0.3;
+  top: 5px;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 600;
 }
 /*header 头部*/
 .header {
@@ -2440,6 +2640,10 @@ body {
   position: relative;
   cursor: pointer;
 }
+.Recommend .Recommend_info .Recommend_item a {
+  display: block;
+  text-decoration: none;
+}
 .Recommend .Recommend_info .Recommend_item img {
   display: block;
   width: 150px;
@@ -2526,197 +2730,6 @@ body {
 }
 .Recommend .Recommend_info .Recommend_item:nth-child(5n) {
   margin-right: 0;
-}
-/*footer*/
-/*top*/
-.footer .f_top {
-  padding: 30px 0;
-  border-bottom: 1px solid #dedede;
-}
-.footer .f_top ul::after {
-  display: table;
-  content: "";
-  clear: both;
-}
-.footer .f_top ul li {
-  float: left;
-  width: 297px;
-}
-.footer .f_top ul li i {
-  float: left;
-  width: 36px;
-  height: 42px;
-  background-image: url(../img/footerSprite.png);
-  margin-right: 9px;
-}
-.footer .f_top ul li p {
-  line-height: 42px;
-  font-size: 18px;
-  font-weight: 700;
-  color: #444;
-}
-.footer .f_top ul li:nth-child(1) i {
-  background-position: 0 -192px;
-}
-.footer .f_top ul li:nth-child(2) i {
-  background-position: -41px -192px;
-}
-.footer .f_top ul li:nth-child(3) i {
-  background-position: -82px -192px;
-}
-.footer .f_top ul li:nth-child(4) i {
-  background-position: -123px -192px;
-}
-.footer .f_center {
-  padding: 20px 0;
-  border-bottom: 1px solid #dedede;
-  overflow: hidden;
-}
-.footer .f_center ul {
-  float: left;
-  width: 198px;
-}
-.footer .f_center ul li {
-  font-size: 12px;
-  line-height: 22px;
-  color: #666;
-}
-.footer .f_center ul li:first-child {
-  margin-bottom: 5px;
-  font-size: 14px;
-  font-weight: bold;
-}
-.footer .f_center ul li a {
-  color: #666;
-  text-decoration: none;
-}
-.footer .f_center ul li a:hover {
-  color: #e1251b;
-}
-.footer .f_center ul li:not(:first-child) a:hover {
-  color: #e1251b;
-}
-.footer .f_center div {
-  float: left;
-  width: 200px;
-}
-.footer .f_center div h4 {
-  font-size: 14px;
-  line-height: 22px;
-  color: #666;
-  margin-bottom: 15px;
-  text-align: center;
-}
-.footer .f_center div p {
-  font-size: 12px;
-  color: #666;
-  padding: 0 10px;
-  line-height: 18px;
-}
-.footer .f_center div .f_c_det {
-  float: right;
-  cursor: pointer;
-}
-.footer .f_center div .f_c_det i {
-  font-size: 12px;
-  line-height: 12px;
-}
-.footer .f_center div .f_c_det:hover {
-  color: #e1251b;
-}
-.footer .f_btm {
-  padding: 15px 0;
-}
-.footer .f_btm ul {
-  margin: 0 auto;
-  width: fit-content;
-  overflow: hidden;
-}
-.footer .f_btm ul li {
-  float: left;
-  font-size: 12px;
-}
-.footer .f_btm ul li:not(:last-child):after {
-  display: inline-block;
-  content: "|";
-  margin: 0 10px;
-  color: #ccc;
-}
-.footer .f_btm ul li a {
-  color: #666;
-  text-decoration: none;
-}
-.footer .f_btm ul li a:hover {
-  color: #e1251b;
-}
-.footer .f_btm .f_btm_info {
-  margin-top: 10px;
-  line-height: 22px;
-  color: #999;
-  font-size: 12px;
-}
-.footer .f_btm .f_btm_info ul {
-  overflow: hidden;
-}
-.footer .f_btm .f_btm_info ul li a {
-  color: #999;
-}
-.footer .f_btm .f_btm_info ul li i {
-  width: 15px;
-  height: 12px;
-  background-image: url(../img/footerSprite.png);
-  margin-right: 10px;
-  display: inline-block;
-  position: relative;
-  top: 2px;
-}
-.footer .f_btm .f_btm_info ul li:nth-child(1) i {
-  background-position: -108px -155px;
-}
-.footer .f_btm .f_btm_info ul li:nth-child(2) i {
-  background-position: -168px -155px;
-}
-.footer .f_btm .f_btm_info ul li:nth-child(3) i {
-  background-position: -148px -155px;
-}
-.footer .f_btm .f_btm_info ul li:nth-child(4) i {
-  background-position: -128px -155px;
-}
-.footer .f_btm .f_btm_info ul li:nth-child(5) i {
-  background-position: -108px -172px;
-}
-.footer .f_btm .f_btm_ico {
-  margin: 25px auto;
-}
-.footer .f_btm .f_btm_ico li a {
-  display: inline-block;
-  margin: 0 3px;
-  width: 103px;
-  height: 32px;
-  background-image: url(../img/footerSprite.png);
-}
-.footer .f_btm .f_btm_ico li:nth-child(1) a {
-  background-position: -205px -111px;
-}
-.footer .f_btm .f_btm_ico li:nth-child(2) a {
-  background-position: -205px -74px;
-}
-.footer .f_btm .f_btm_ico li:nth-child(3) a {
-  background-position: -205px -37px;
-}
-.footer .f_btm .f_btm_ico li:nth-child(4) a {
-  background-image: url(../img/footerSprite2.png);
-  background-position: 0 -66px;
-}
-.footer .f_btm .f_btm_ico li:nth-child(5) a {
-  background-position: 0 -155px;
-}
-.footer .f_btm .f_btm_ico li:nth-child(6) a {
-  background-image: url(../img/footerSprite2.png);
-  background-position: 0 -99px;
-}
-.footer .f_btm .f_btm_ico li::after {
-  display: none !important;
 }
 /*电梯导航*/
 .leftNav {

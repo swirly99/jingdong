@@ -1,0 +1,266 @@
+.content {
+  width: 990px;
+  margin: 0 auto;
+}
+.header {
+  height: 110px;
+  position: relative;
+}
+.header .logoimg a {
+  width: 160px;
+  height: 50px;
+  float: left;
+  margin-top: 24px;
+  overflow: hidden;
+  background-image: url(../img/reg_icon.png);
+}
+.header h2 {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  font-size: 24px;
+  color: #333;
+  margin-top: 34px;
+  font-weight: normal;
+}
+.header .btm {
+  position: absolute;
+  bottom: 0;
+  background: #fff8f0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #999;
+}
+.header .btm p {
+  font-size: 12px;
+  line-height: 16px;
+}
+.header .btm p i {
+  display: inline-block;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-image: url(../img/reg_icon.png);
+  background-position: 0 -100px;
+}
+.center {
+  width: 100%;
+  height: 475px;
+  background: #e93854;
+}
+.center .content {
+  height: 475px;
+  background: url(../img/loginbackground.png) no-repeat center;
+}
+.center .content .login-form {
+  position: relative;
+  background: #fff;
+  width: 346px;
+  float: right;
+  top: 10px;
+}
+.center .content .login-form .tips {
+  background: #fff8f0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  line-height: 16px;
+}
+.center .content .login-form .tips i {
+  display: inline-block;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-image: url(../img/reg_icon.png);
+  background-position: 0 -100px;
+}
+.center .content .login-form .tab-form ul {
+  display: flex;
+  margin: 0;
+}
+.center .content .login-form .tab-form ul li {
+  list-style: none;
+  display: block;
+  width: 173px;
+  height: 54px;
+  border-bottom: 1px solid #f4f4f4;
+  position: relative;
+}
+.center .content .login-form .tab-form ul li a {
+  display: block;
+  width: 173px;
+  height: 18px;
+  font-size: 18px;
+  text-align: center;
+  border-right: 1px solid #f4f4f4;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  position: absolute;
+  top: 18px;
+  color: #666;
+}
+.center .content .login-form .tab-form ul li:hover a {
+  font-weight: 700;
+  color: #e4393c;
+}
+.center .content .login-form .tab-form ul .active a {
+  font-weight: 700;
+  color: #e4393c;
+}
+.center .content .login-form form {
+  margin-top: 33px;
+}
+.center .content .login-form form div {
+  height: 40px;
+  width: 304px;
+  position: relative;
+  border: 1px solid #bdbdbd;
+  margin: 20px auto 0;
+}
+.center .content .login-form form div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 18px;
+  border-right: 1px solid #bdbdbd;
+  background: #f4f4f4;
+  color: #cfcfcf;
+  text-align: center;
+}
+.center .content .login-form form div input {
+  line-height: 18px;
+  border: 0;
+  padding: 10px 0 10px 50px;
+  width: 302px;
+  float: none;
+  overflow: hidden;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.center .content .login-form form div input:focus {
+  outline: none;
+  border: none;
+}
+.center .content .login-form form p {
+  margin: 20px auto 0;
+  width: 304px;
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+}
+.center .content .login-form form button {
+  border: 1px solid #e85356;
+  display: block;
+  width: 302px;
+  background: #e4393c;
+  height: 33px;
+  line-height: 33px;
+  color: #fff;
+  font-size: 20px;
+  margin: 20px auto 30px;
+  padding: 0;
+  cursor: pointer;
+}
+.center .content .login-form .other {
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 50px;
+  border-top: 1px solid #f4f4f4;
+  height: auto;
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: space-between;
+}
+.center .content .login-form .other ul {
+  display: flex;
+  float: left;
+  margin: 0;
+}
+.center .content .login-form .other ul li {
+  list-style: none;
+  font-size: 12px;
+}
+.center .content .login-form .other ul li:first-child::after {
+  display: inline-block;
+  content: "|";
+  color: #ccc;
+  padding: 0 10px;
+}
+.center .content .login-form .other ul li a {
+  color: #666;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.center .content .login-form .other ul li a i {
+  vertical-align: middle;
+}
+.center .content .login-form .other ul li .icon-QQ-circle-fill {
+  color: #1aacff;
+}
+.center .content .login-form .other ul li .icon-wxtb {
+  color: #00cc00;
+}
+.center .content .login-form .other > a {
+  float: right;
+  color: #b61d1d;
+  font-size: 14px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.center .content .login-form .other > a i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  background: #b61d1d;
+  border-radius: 50%;
+  text-align: center;
+  font-style: normal;
+  vertical-align: middle;
+}
+.footer {
+  font-size: 12px;
+  text-align: center;
+  border-top: solid 1px #e6e6e6;
+  color: #000;
+  padding-bottom: 30px;
+}
+.footer ul {
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  width: fit-content;
+}
+.footer ul li {
+  float: left;
+  list-style: none;
+}
+.footer ul li a {
+  color: #000;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.footer ul li::after {
+  display: inline-block;
+  content: "|";
+}
+.footer ul li:hover a {
+  text-decoration: underline;
+  color: #e4393c;
+}

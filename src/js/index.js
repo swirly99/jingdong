@@ -1,4 +1,9 @@
 import Swiper from "https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js";
+import $ from "./library/jquery.js";
+//引入footer header
+$("footer").load("footer.html");
+$(".shortcut").load("shortcut.html");
+//顶部广告
 $("#promoTop_close").click(function () {
     $(".promotional-top").css("display", "none");
     $(".leftNav").css("top", $(".seckill").offset().top);
@@ -461,24 +466,70 @@ $.getJSON("../json/recommend.json", function (data) {
     });
 });
 function recommendItem(data, thisId = "choiceness") {
-    let reItem = ``;
-    for (let i = 0; i < data[thisId].img.length; i++) {
-        reItem += `<div class="Recommend_item">
-            <img src="../img/${data[thisId].img[i]}" alt="" />
-            <p class="title">${data[thisId].title[i]}</p>
-            <p class="price">
-                <span>￥</span>${data[thisId].price[i].slice(0, -2)}<span>.${data[thisId].price[i].slice(-2)}</span>
-            </p>
-            <div class="Recommend_item_hover">
-                <i class="iconfont icon-31guanbi"></i>
-                <div class="similarity_btn">
-                    <button>
-                        <i class="iconfont icon-yanjing"></i>
-                        找相似
-                    </button>
+    if (thisId !== "choiceness") {
+        let reItem = ``;
+        for (let i = 0; i < data[thisId].img.length; i++) {
+            reItem += `<div class="Recommend_item">
+            <a href="javascript:;">
+                <img src="../img/${data[thisId].img[i]}" alt="" />
+                <p class="title">${data[thisId].title[i]}</p>
+                <p class="price">
+                    <span>￥</span>${data[thisId].price[i].slice(0, -2)}<span>${data[thisId].price[i].slice(-2)}</span>
+                </p>
+                <div class="Recommend_item_hover">
+                    <i class="iconfont icon-31guanbi"></i>
+                    <div class="similarity_btn">
+                        <button>
+                            <i class="iconfont icon-yanjing"></i>
+                            找相似
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>`;
+        }
+        $(".Recommend_info").html(reItem);
+    } else {
+        recomedGetAjax();
     }
-    $(".Recommend_info").html(reItem);
+}
+
+//recomed sql
+function recomedGetAjax() {
+    $.ajax({
+        type: "get",
+        url: "../../interface/getItems.php",
+        dataType: "json",
+    })
+        .then((res) => {
+            let template = "";
+            res.forEach((elm, i) => {
+                let img = JSON.parse(elm.img);
+                template += `
+                <div class="Recommend_item">
+                    <a href="./detail.html?id=${elm.id}">
+                        <img src="../${img[0].src}" alt="${img[0].slt}" />
+                        <p class="title">${elm.title}</p>
+                        <p class="price"><span>￥</span>${parseFloat(elm.price).toFixed(0)}<span>.${parseFloat(
+                    elm.price
+                )
+                    .toFixed(2)
+                    .slice(-2)}</span></p>
+                        <div class="Recommend_item_hover">
+                            <i class="iconfont icon-31guanbi"></i>
+                            <div class="similarity_btn">
+                                <button>
+                                    <i class="iconfont icon-yanjing"></i>
+                                    找相似
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>`;
+            });
+            $(".Recommend_info").html(template);
+        })
+        .catch((xhr) => {
+            console.log(xhr.status);
+        });
 }

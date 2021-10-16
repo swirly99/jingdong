@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>注册</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+        <link href="https://cdn.bootcdn.net/ajax/libs/reseter.css/2.0.0/reseter.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/register.css" />
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    </head>
+    <body>
+        <div class="dialog"></div>
+        <div class="header">
+            <div class="content">
+                <div class="logoimg">
+                    <a href="./index.html"></a>
+                </div>
+                <h2>欢迎注册</h2>
+                <p>
+                    已有账号？
+                    <a href="./login.html">请登录></a>
+                </p>
+            </div>
+        </div>
+        <div class="center">
+            <div class="tab">
+                <ul>
+                    <li class="active">
+                        <span>1</span>
+                        <p>验证手机号</p>
+                    </li>
+                    <li>
+                        <i></i>
+                    </li>
+                    <li>
+                        <span>2</span>
+                        <p>填写账号信息</p>
+                    </li>
+                    <li>
+                        <i></i>
+                    </li>
+                    <li>
+                        <span>3</span>
+                        <p>注册成功</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="inputPhone">
+                <form action="../../interface/regPhone.php" method="post">
+                    <div class="phone">
+                        <input type="text" placeholder="建议使用常用手机号" name="phone" class="phoneTure" /><select
+                            name="phoneArea"
+                            id="phoneArea"
+                        >
+                            <option value="中国 .0086" selected>中国 0086</option>
+                        </select>
+                        <p><i></i>验证完成后，你可以使用该手机登录或找回密码</p>
+                    </div>
+                    <button class="checkPhone">点击按钮进行验证</button>
+                </form>
+            </div>
+            <div class="inputInfo">
+                <form action="../../interface/reg.php" method="post">
+                    <div class="inputInfoDiv">
+                        <p id="username">
+                            <span>用户名:</span>
+                            <input type="text" name="username" />
+                            <i></i>
+                        </p>
+                        <h6 class="hintUsername"></h6>
+                        <p id="password">
+                            <span>密码:</span>
+                            <input type="password" name="password" />
+                            <i></i>
+                        </p>
+                        <h6 class="hintPassword"></h6>
+                        <p id="checkpwd">
+                            <span>确认密码:</span>
+                            <input type="password" />
+                            <i></i>
+                        </p>
+                        <h6 class="hintCheckpwd"></h6>
+                        <p id="email">
+                            <span>邮箱:</span><input type="text" name="email" />
+                            <i></i>
+                        </p>
+                        <h6 class="hintEmail"></h6>
+                        <p id="phone">
+                            <span>手机号:</span><input type="text" name="phone" />
+                            <i></i>
+                        </p>
+                        <h6 class="hintPhone"></h6>
+                    </div>
+                    <button class="next">下一步</button>
+                </form>
+            </div>
+            <div class="inputLoginDiv">
+                <span></span>
+                <p>注册成功</p>
+                <a href="../html/login.html">登录</a>
+            </div>
+            <div class="each">
+                <div class="enterprise">
+                    <i></i>
+                    <p>企业用户注册</p>
+                </div>
+                <div class="overseas">
+                    <i></i>
+                    <p>海外用户注册</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer content">
+            <ul>
+                <li><a href="javascript:;">关于我们</a></li>
+                <li><a href="javascript:;">联系我们</a></li>
+                <li><a href="javascript:;">人才招聘</a></li>
+                <li><a href="javascript:;">商家入驻</a></li>
+                <li><a href="javascript:;">广告服务</a></li>
+                <li><a href="javascript:;">手机京东</a></li>
+                <li><a href="javascript:;">友情链接</a></li>
+                <li><a href="javascript:;">销售联盟</a></li>
+                <li><a href="javascript:;">京东社区</a></li>
+                <li><a href="javascript:;">京东公益</a></li>
+                <li><a href="javascript:;">English Site</a></li>
+            </ul>
+            <p>Copyright©2004-2021 京东JD.com 版权所有</p>
+        </div>
+    </body>
+    <script src="../js/register.js"></script>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>购物车</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+        <link href="https://cdn.bootcdn.net/ajax/libs/reseter.css/2.0.0/reseter.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_2844066_hsgp6p0ugsm.css" />
+        <link rel="stylesheet" href="../css/shoppincart.css" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo"></div>
+            <div class="search">
+                <input type="text" />
+                <button>搜索</button>
+            </div>
+        </div>
+        <div class="center">
+            <div class="title">
+                <p class="allProducts">
+                    全部商品
+                    <span>2</span>
+                </p>
+                <p class="toArea">
+                    配送至：
+                    <select name="area" id="area">
+                        <option value="北京朝阳区三环以内">北京朝阳区三环以内</option>
+                    </select>
+                </p>
+            </div>
+            <div class="headline">
+                <ul>
+                    <li class="t_checkbox">
+                        <input type="checkbox" name="allchouse" id="allchouse" /> <label for="allchouse">全选</label>
+                    </li>
+                    <li class="t_goods">商品</li>
+                    <li class="t_price">单价</li>
+                    <li class="t_num">数量</li>
+                    <li class="t_sum">小计</li>
+                    <li class="t_active">操作</li>
+                </ul>
+            </div>
+            <div class="productList">
+                <!-- <div class="productItem">
+                    <div class="p_title">
+                        <input type="checkbox" name="item_all" id="item_all1" />
+                        <label for="item_all1">苏泊尔京东自营旗舰店</label>
+                        <i class="iconfont icon-jingdongkefu"></i>
+                    </div>
+                    <div class="p_body">
+                        <div class="p_body_tips">
+                            <span>换购</span>
+                            <p class="trade">
+                                已满1件，可低价换购商品
+                                <a href="javascript:;"> 立即换购> </a>
+                            </p>
+                            <p class="tips_price">￥<span>53.8</span></p>
+                        </div>
+                        <div class="p_body_content">
+                            <input type="checkbox" name="chouse" class="chouse" />
+                            <img src="../img/medicineimg1.jpg.webp" alt="" />
+                            <p class="pro_title">
+                                <span>京东超市</span>
+                                <a href="javascript:;"
+                                    >苏泊尔（SUPOR）空气炸锅家用4.5L大容量 多功能蒸汽炸锅 无油煎炸智能液晶触控
+                                    烤箱薯条机KD45DQ817</a
+                                >
+                            </p>
+                            <p class="pro_type">【颜值担当】4.5L蒸汽炸 经典黑</p>
+                            <p class="pro_price">￥<span>369.00</span></p>
+                            <p class="pro_number">
+                                <button>-</button>
+                                <input type="text" min="1" placeholder="1" />
+                                <button>+</button>
+                            </p>
+                            <p class="pro_priceSum">￥<span>369.00</span></p>
+                            <div class="buts">
+                                <p class="pro_del">删除</p>
+                                <p class="pro_flow">移入关注</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="p_title">
+                        <input type="checkbox" name="item_all" id="item_all" />
+                        <label for="item_all">苏泊尔京东自营旗舰店</label>
+                        <i class="iconfont icon-jingdongkefu"></i>
+                    </div>
+                    <div class="p_body">
+                        <div class="p_body_tips">
+                            <span>换购</span>
+                            <p class="trade">
+                                已满1件，可低价换购商品
+                                <a href="javascript:;"> 立即换购> </a>
+                            </p>
+                            <p class="tips_price">￥<span>53.8</span></p>
+                        </div>
+                        <div class="p_body_content">
+                            <input type="checkbox" name="chouse" class="chouse" />
+                            <img src="../img/medicineimg1.jpg.webp" alt="" />
+                            <p class="pro_title">
+                                <span>京东超市</span>
+                                <a href="javascript:;"
+                                    >苏泊尔（SUPOR）空气炸锅家用4.5L大容量 多功能蒸汽炸锅 无油煎炸智能液晶触控
+                                    烤箱薯条机KD45DQ817</a
+                                >
+                            </p>
+                            <p class="pro_type">【颜值担当】4.5L蒸汽炸 经典黑</p>
+                            <p class="pro_price">￥<span>369.00</span></p>
+                            <p class="pro_number">
+                                <button>-</button>
+                                <input type="text" min="1" placeholder="1" />
+                                <button>+</button>
+                            </p>
+                            <p class="pro_priceSum">￥<span>369.00</span></p>
+                            <div class="buts">
+                                <p class="pro_del">删除</p>
+                                <p class="pro_flow">移入关注</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p_body">
+                        <div class="p_body_tips">
+                            <span>换购</span>
+                            <p class="trade">
+                                已满1件，可低价换购商品
+                                <a href="javascript:;"> 立即换购> </a>
+                            </p>
+                            <p class="tips_price">￥<span>53.8</span></p>
+                        </div>
+                        <div class="p_body_content">
+                            <input type="checkbox" name="chouse" class="chouse" />
+                            <img src="../img/medicineimg1.jpg.webp" alt="" />
+                            <p class="pro_title">
+                                <span>京东超市</span>
+                                <a href="javascript:;"
+                                    >苏泊尔（SUPOR）空气炸锅家用4.5L大容量 多功能蒸汽炸锅 无油煎炸智能液晶触控
+                                    烤箱薯条机KD45DQ817</a
+                                >
+                            </p>
+                            <p class="pro_type">【颜值担当】4.5L蒸汽炸 经典黑</p>
+                            <p class="pro_price">￥<span>369.00</span></p>
+                            <p class="pro_number">
+                                <button>-</button>
+                                <input type="text" min="1" placeholder="1" />
+                                <button>+</button>
+                            </p>
+                            <p class="pro_priceSum">￥<span>369.00</span></p>
+                            <div class="buts">
+                                <p class="pro_del">删除</p>
+                                <p class="pro_flow">移入关注</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="fixSum">
+            <div class="content">
+                <div class="s_left">
+                    <input type="checkbox" name="s_allSum" id="s_allSum" />
+                    <label for="s_allSum">全选</label>
+                    <p class="s_del">删除选中的商品</p>
+                    <p>移入关注</p>
+                    <p class="clearShoppingCart">清理购物车</p>
+                </div>
+                <div class="s_right">
+                    <p class="hoveChosen">
+                        已选择
+                        <span>0</span>
+                        件商品
+                        <i></i>
+                    </p>
+                    <p>总价：</p>
+                    <p class="allPrice">￥ <span>0.00</span></p>
+                    <i class="iconfont icon-tishi"></i>
+                    <button>去结算</button>
+                </div>
+            </div>
+        </div>
+        <div class="guess">
+            <div class="g_tab">
+                <ul>
+                    <li class="active"><a href="javscript:;">猜你喜欢</a></li>
+                    <li><a href="javscript:;">随手购</a></li>
+                </ul>
+                <div class="swiper-container guess-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="guess_item">
+                                <img src="../img/medicineimg2.jpg.webp" alt="" />
+                                <p class="item_name">
+                                    公牛开关插座面板五孔插座86型墙壁墙面二三插电源暗装10A5孔插座G07Z223A
+                                </p>
+                                <p class="item_price">￥<span>9.70</span></p>
+                                <button>
+                                    <i></i>
+                                    加入购物车
+                                </button>
+                            </div>
+                            <div class="guess_item">
+                                <img src="../img/medicineimg2.jpg.webp" alt="" />
+                                <p class="item_name">
+                                    公牛开关插座面板五孔插座86型墙壁墙面二三插电源暗装10A5孔插座G07Z223A
+                                </p>
+                                <p class="item_price">￥<span>9.70</span></p>
+                                <button>
+                                    <i></i>
+                                    加入购物车
+                                </button>
+                            </div>
+                            <div class="guess_item">
+                                <img src="../img/medicineimg2.jpg.webp" alt="" />
+                                <p class="item_name">
+                                    公牛开关插座面板五孔插座86型墙壁墙面二三插电源暗装10A5孔插座G07Z223A
+                                </p>
+                                <p class="item_price">￥<span>9.70</span></p>
+                                <button>
+                                    <i></i>
+                                    加入购物车
+                                </button>
+                            </div>
+                            <div class="guess_item">
+                                <img src="../img/medicineimg2.jpg.webp" alt="" />
+                                <p class="item_name">
+                                    公牛开关插座面板五孔插座86型墙壁墙面二三插电源暗装10A5孔插座G07Z223A
+                                </p>
+                                <p class="item_price">￥<span>9.70</span></p>
+                                <button>
+                                    <i></i>
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="guess_item">
+                                <img src="../img/medicineimg2.jpg.webp" alt="" />
+                                <p class="item_name">
+                                    公牛开关插座面板五孔插座86型墙壁墙面二三插电源暗装10A5孔插座G07Z223A
+                                </p>
+                                <p class="item_price">￥<span>9.70</span></p>
+                                <button>
+                                    <i></i>
+                                    加入购物车
+                                </button>
+                            </div>
+                            <div class="guess_item">
+                                <img src="../img/medicineimg2.jpg.webp" alt="" />
+                                <p class="item_name">
+                                    公牛开关插座面板五孔插座86型墙壁墙面二三插电源暗装10A5孔插座G07Z223A
+                                </p>
+                                <p class="item_price">￥<span>9.70</span></p>
+                                <button>
+                                    <i></i>
+                                    加入购物车
+                                </button>
+                            </div>
+                            <div class="guess_item">
+                                <img src="../img/medicineimg2.jpg.webp" alt="" />
+                                <p class="item_name">
+                                    公牛开关插座面板五孔插座86型墙壁墙面二三插电源暗装10A5孔插座G07Z223A
+                                </p>
+                                <p class="item_price">￥<span>9.70</span></p>
+                                <button>
+                                    <i></i>
+                                    加入购物车
+                                </button>
+                            </div>
+                            <div class="guess_item">
+                                <img src="../img/medicineimg2.jpg.webp" alt="" />
+                                <p class="item_name">
+                                    公牛开关插座面板五孔插座86型墙壁墙面二三插电源暗装10A5孔插座G07Z223A
+                                </p>
+                                <p class="item_price">￥<span>9.70</span></p>
+                                <button>
+                                    <i></i>
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/shoppingcart.js" type="module"></script>
+</html>
