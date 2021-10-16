@@ -69,7 +69,7 @@ if (shop) {
                                 <p class="pro_price">￥<span>${parseFloat(el.price).toFixed(2)}</span></p>
                                 <p class="pro_number">
                                     <button class="pro_subtract" data-id=${el.id}>-</button>
-                                    <input type="text" min="1" placeholder="1" value="${num}"/>
+                                    <input type="text" min="1" placeholder="1" value="${num}" data-id=${el.id} />
                                     <button class="pro_add" data-id=${el.id}>+</button>
                                 </p>
                                 <p class="pro_priceSum">￥<span>${parseFloat(num * el.price).toFixed(2)}</span></p>
@@ -158,6 +158,15 @@ if (shop) {
             $(".pro_add").click(function () {
                 addSubtract(this, 1);
             });
+            //修改
+            $(".pro_number input").change(function () {
+                let thisId = $(this).attr("data-id");
+                let currentIndex = shop.findIndex((e) => e.id == thisId);
+                let currentNum = parseInt($(this).val());
+                shop[currentIndex].num = currentNum;
+                cookie.set("shop", JSON.stringify(shop), 1);
+                location.reload();
+            });
             //商品总数量
             $(".allProducts span").html(shop.length);
         })
@@ -173,6 +182,6 @@ function isAllCheck() {
 }
 
 //店铺全选
-$(".productItem .p_title input").click(function (ev) {
-    console.log(1);
-});
+// $(".productItem .p_title input").click(function (ev) {
+//     console.log(1);
+// });
